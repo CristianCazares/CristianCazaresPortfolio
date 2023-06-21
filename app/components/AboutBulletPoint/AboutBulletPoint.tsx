@@ -1,11 +1,7 @@
+import { BulletPoint } from "@/utils/types";
 import styles from "./style.module.css";
 
-interface Props {
-  emoticon: string;
-  text: string;
-}
-
-const AboutBulletPoint = ({ emoticon, text }: Props) => {
+const AboutBulletPoint = ({ emoticon, text }: BulletPoint) => {
   return (
     <>
       <div className={styles.container}>

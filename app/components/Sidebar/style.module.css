@@ -1,20 +1,45 @@
+@import "../../../utils/styles/palette.css";
+
 .sidebar {
   height: 100%;
-  background-color: #1d202b;
+  background-color: var(--emphasis);
   place-content: center;
-  padding-top: 32px;
+  padding: 0px 32px 0 32px;
 }
 
 .header {
-  text-align: center;
+  padding: 32px 0px 16px 0px;
+}
+
+.titleContainer {
+  position: relative;
+  width: fit-content;
+}
+
+.titleOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 70%);
+  border-radius: 0 15px 0 16px;
+  padding-left: 8px;
+  padding-right: 4px;
+  width: 35%;
 }
 
 .title {
   margin: 0;
+  color: #fff;
 }
 
 .subtitle {
-  margin: 0 0 32px 0;
+  margin: 0 0 0 0;
   font-weight: 700;
   color: #f27e39;
+}
+
+.image {
+  width: calc((480px - 32px * 2));
+  object-fit: cover;
+  border-radius: 16px;
 }

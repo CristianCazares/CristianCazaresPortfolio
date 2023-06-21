@@ -1,6 +1,8 @@
-import { BulletPoint } from "../../types";
+import Image from "next/image";
+import { BulletPoint } from "../../../utils/types";
 import AboutBulletPoint from "../AboutBulletPoint";
 import styles from "./style.module.css";
+import CristianCazaresPhoto from "../../../public/img/CristianCazares.jpg";
 
 const BULLET_POINTS: BulletPoint[] = [
   {
@@ -21,10 +23,20 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
-        <h1 className={styles.title}>Cristian Cázares</h1>
-        <p className={styles.subtitle}>Software Engineer</p>
+        <div className={styles.titleContainer}>
+          <div className={styles.titleOverlay}>
+            <h1 className={styles.title}>Cristian Cázares</h1>
+            <p className={styles.subtitle}>Software Engineer</p>
+          </div>
+          <Image
+            className={styles.image}
+            alt="Cristian Cázares Photo"
+            src={CristianCazaresPhoto}
+            width={400}
+          />
+        </div>
       </div>
-      <div style={{ paddingRight: 32, paddingLeft: 32 }}>
+      <div>
         {BULLET_POINTS.map((item, i) => (
           <AboutBulletPoint key={i} emoticon={item.emoticon} text={item.text} />
         ))}
