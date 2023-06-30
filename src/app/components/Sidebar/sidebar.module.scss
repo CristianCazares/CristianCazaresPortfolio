@@ -1,8 +1,8 @@
-@import "../../../utils/styles/palette.css";
+@use "index";
 
 .sidebar {
   height: 100%;
-  background-color: var(--emphasis);
+  background-color: index.$backgroundAccent;
   place-content: center;
   padding: 0px 32px 0 32px;
 }
@@ -20,7 +20,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 70%);
+  background-color: index.$overlay;
   border-radius: 0 15px 0 16px;
   padding-left: 8px;
   padding-right: 4px;
@@ -35,7 +35,7 @@
 .subtitle {
   margin: 0 0 0 0;
   font-weight: 700;
-  color: #f27e39;
+  color: index.$primary;
 }
 
 .image {

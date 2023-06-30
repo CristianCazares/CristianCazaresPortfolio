@@ -1,5 +1,5 @@
 import { BulletPoint } from "@/utils/types";
-import styles from "./style.module.css";
+import styles from "./style.module.scss";
 
 const AboutBulletPoint = ({ emoticon, text }: BulletPoint) => {
   return (

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { BulletPoint } from "../../../utils/types";
 import AboutBulletPoint from "../AboutBulletPoint";
-import styles from "./style.module.css";
-import CristianCazaresPhoto from "../../../public/img/CristianCazares.jpg";
+import styles from "./sidebar.module.scss";
+import CristianCazaresPhoto from "@/../public/img/CristianCazares.jpg";
 
 const BULLET_POINTS: BulletPoint[] = [
   {
