@@ -1,6 +1,9 @@
-@use "index";
+@use "palette";
+
 html,
 body {
   margin: 0;
   height: 100%;
+  background-color: palette.$colorBackground;
+  color: palette.$colorText;
 }
