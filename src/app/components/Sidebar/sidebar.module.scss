@@ -1,45 +1,19 @@
 @use "index";
+@use "dimensions";
 
 .sidebar {
-  height: 100%;
-  background-color: index.$backgroundAccent;
-  place-content: center;
-  padding: 0px 32px 0 32px;
+  border: index.$backgroundAccent solid 1px;
+  border-radius: 36px;
+  padding: 16px;
+  width: calc(dimensions.$sidebarW - 16px * 2);
 }
 
 .header {
-  padding: 32px 0px 16px 0px;
+  padding: 8px 0px 16px 0px;
 }
 
-.titleContainer {
-  position: relative;
-  width: fit-content;
-}
-
-.titleOverlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: index.$overlay;
-  border-radius: 0 15px 0 16px;
-  padding-left: 8px;
-  padding-right: 4px;
-  width: 35%;
-}
-
-.title {
-  margin: 0;
-  color: #fff;
-}
-
-.subtitle {
-  margin: 0 0 0 0;
-  font-weight: 700;
-  color: index.$primary;
-}
-
-.image {
-  width: calc((480px - 32px * 2));
-  object-fit: cover;
-  border-radius: 16px;
+.imageContainer {
+  width: 100%;
+  display: grid;
+  place-content: center;
 }
