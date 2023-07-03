@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar } from "./components";
+import { Navbar, ProjectCard } from "./components";
 import styles from "./page.module.scss";
 import CristianPhoto from "@/../public/img/CristianCazares.jpg";
+import { PROJECT_BASIC_INFO } from "@/lib/ProjectsBasicInfo";
 
 const Home = () => {
   return (
@@ -24,23 +25,15 @@ const Home = () => {
             <div className={styles.cardContainerHeader} />
           </div>
           <div className={styles.content}>
-            <Link href="https://github.com/Bugs-io/ibm-dashboard-app">
-              <div className={styles.cardContainer}>
-                IBM Strategic dashboard
-              </div>
-            </Link>
-            <Link href="https://github.com/FoodBank-GDL/FoodBank-ReactNative">
-              <div className={styles.cardContainer}>Food Bank</div>
-            </Link>
-            <Link href="https://github.com/ITESMECHO/MultiagentsGraphics">
-              <div className={styles.cardContainer}>Multiagents</div>
-            </Link>
-            <Link href="https://github.com/HackMTY-Team-6/HackMTY-Team6">
-              <div className={styles.cardContainer}>Blood Manager</div>
-            </Link>
-            <Link href="https://github.com/CarlosCRG19/ijalti-peers">
-              <div className={styles.cardContainer}>Ijalti Peers</div>
-            </Link>
+            {PROJECT_BASIC_INFO.map((project, i) => (
+              <ProjectCard
+                key={`Project${i}`}
+                title={project.title}
+                subtitle={project.subtitle}
+                image={project.image}
+                url={project.url}
+              />
+            ))}
           </div>
         </div>
       </main>

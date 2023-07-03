@@ -40,16 +40,3 @@
   border-radius: 32px;
   background-color: thistle;
 }
-
-.cardContainer {
-  background-color: darkslategrey;
-  border-radius: 32px;
-  height: calc(400px - 32px * 2);
-  padding: 32px;
-  transition: transform 0.25s ease-in-out;
-}
-
-.cardContainer:hover {
-  transform: scale(102%);
-  cursor: pointer;
-}

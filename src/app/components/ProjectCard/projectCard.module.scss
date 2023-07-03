@@ -1,0 +1,26 @@
+@use "dimensions";
+@use "palette";
+
+.containerHeader {
+  height: dimensions.$projectCardH;
+  border-radius: 32px;
+  background-color: thistle;
+}
+
+.container {
+  background-color: darkslategrey;
+  border-radius: 32px;
+  height: calc(dimensions.$projectCardH - 32px * 2);
+  padding: 32px;
+  transition: transform 0.25s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(102%);
+  cursor: pointer;
+}
+
+.link {
+  color: inherit;
+  text-decoration: inherit;
+}
