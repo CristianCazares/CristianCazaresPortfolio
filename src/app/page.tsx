@@ -11,30 +11,36 @@ const Home = () => {
       <Navbar />
       <main className={styles.main}>
         <div className={styles.container}>
-          <div className={styles.header}>
-            <div
-              className={`${styles.cardContainerHeader} ${styles.imageContainer}`}
-            >
-              <Image
+          <div className={`${styles.cardHeader} ${styles.imageCard}`}>
+            {/*<Image
                 className={styles.image}
                 alt="Cristian's photo"
                 src={CristianPhoto}
                 height={400}
-              />
-            </div>
-            <div className={styles.cardContainerHeader} />
+              />*/}
           </div>
-          <div className={styles.content}>
-            {PROJECT_BASIC_INFO.map((project, i) => (
-              <ProjectCard
+          <div
+            className={`${styles.cardHeader} ${styles.card} ${styles.aboutCard}`}
+          >
+            <h1>Cristian Cázares</h1>
+            <p>Computer engineer</p>
+          </div>
+
+          {PROJECT_BASIC_INFO.map((project, i) => {
+            return (
+              <div
                 key={`Project${i}`}
-                title={project.title}
-                subtitle={project.subtitle}
-                image={project.image}
-                url={project.url}
-              />
-            ))}
-          </div>
+                className={`${styles.projectCard} ${styles.card}`}
+              >
+                <ProjectCard
+                  title={project.title}
+                  subtitle={project.subtitle}
+                  image={project.image}
+                  url={project.url}
+                />
+              </div>
+            );
+          })}
         </div>
       </main>
       <footer style={{ height: 24 }}></footer>
