@@ -1,6 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export type BulletPoint = {
-  emoticon: string;
+  emoticon?: string;
   text: string;
+  src?: StaticImageData;
+  alt?: string;
 };
 
 export type ProjectBasicInfo = {

@@ -1,9 +1,9 @@
 import Image from "next/image";
-import Link from "next/link";
-import { Navbar, ProjectCard } from "./components";
+import { HeaderContent, Navbar, ProjectCard } from "./components";
 import styles from "./page.module.scss";
-import CristianPhoto from "@/../public/img/CristianCazares.jpg";
 import { PROJECT_BASIC_INFO } from "@/lib/ProjectsBasicInfo";
+
+import CristianPhoto from "@/../public/img/CristianCazares.jpg";
 
 const Home = () => {
   return (
@@ -12,18 +12,17 @@ const Home = () => {
       <main className={styles.main}>
         <div className={styles.container}>
           <div className={`${styles.cardHeader} ${styles.imageCard}`}>
-            {/*<Image
-                className={styles.image}
-                alt="Cristian's photo"
-                src={CristianPhoto}
-                height={400}
-              />*/}
+            <Image
+              fill
+              alt="Cristian's photo"
+              src={CristianPhoto}
+              className={styles.image}
+            />
           </div>
           <div
             className={`${styles.cardHeader} ${styles.card} ${styles.aboutCard}`}
           >
-            <h1>Cristian Cázares</h1>
-            <p>Computer engineer</p>
+            <HeaderContent />
           </div>
 
           {PROJECT_BASIC_INFO.map((project, i) => {

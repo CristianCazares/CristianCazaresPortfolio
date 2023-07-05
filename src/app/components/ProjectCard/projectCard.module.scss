@@ -3,8 +3,8 @@
 
 .container {
   height: 100%;
-  background-color: darkslategrey;
-  border-radius: 32px;
+  background-color: rgba(88, 102, 253, 0.466);
+  border-radius: dimensions.$cardBorderRadius;
   padding: 32px;
   box-sizing: border-box;
   transition: transform 0.25s ease-in-out;

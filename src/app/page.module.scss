@@ -1,4 +1,5 @@
 @use "dimensions";
+@use "palette";
 
 .main {
   width: 100%;
@@ -15,20 +16,25 @@
   margin: 0 20px;
 }
 
-.card {
-  height: dimensions.$projectCardH;
-}
-
 .cardHeader {
-  border-radius: 32px;
-  background-color: thistle;
-  color: black;
+  border-radius: dimensions.$cardBorderRadius;
+  background-color: hsla(313, 100%, 69%, 0.301);
+  color: rgba(255, 255, 255, 0.85);
   padding: 32px;
   box-sizing: border-box;
 }
 
 .imageCard {
   grid-column: span 3;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+  min-height: 200px;
+}
+
+.image {
+  object-fit: cover;
+  position: absolute;
 }
 
 .aboutCard {
@@ -37,6 +43,7 @@
 
 .projectCard {
   grid-column: span 4;
+  height: 400px;
 }
 
 @media (max-width: 768px) {
@@ -53,16 +60,6 @@
   grid-template-columns: 25% auto;
   gap: 32px;
   margin-bottom: dimensions.$defaultGap;
-}
-.imageContainer {
-  object-fit: cover;
-  overflow: hidden;
-  position: relative;
-}
-
-.image {
-  position: absolute;
-  left: -56%;
 }
 
 .content {
