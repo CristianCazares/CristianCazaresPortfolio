@@ -1,0 +1,40 @@
+@use "palette";
+
+.title {
+  margin-bottom: 24px;
+}
+
+.title h1 {
+  font-size: 36px;
+  font-weight: inherit;
+}
+
+.title p {
+  margin: 0px;
+  font-weight: 600;
+}
+
+.imageContainer {
+  display: inline-block;
+}
+
+.text {
+  margin: 0px;
+  display: inline-block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.buttons button {
+  border: none;
+  background-color: palette.$colorButtonPrimary;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 16px;
+  border-radius: 12px;
+}
