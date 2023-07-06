@@ -1,5 +1,3 @@
-"use client";
-import { use, useEffect } from "react";
 import { BulletPoint } from "@/utils/types";
 import styles from "./aboutMeBulletPoint.module.scss";
 import Image from "next/image";
@@ -17,7 +15,7 @@ const AboutMeBulletPoint = ({ emoticon, text, alt, src }: BulletPoint) => {
       </div>
 
       <p>
-        <ProcessedBoldText boldClass="strong">{text}</ProcessedBoldText>
+        <ProcessedBoldText boldClass="emphasis">{text}</ProcessedBoldText>
       </p>
     </div>
   );

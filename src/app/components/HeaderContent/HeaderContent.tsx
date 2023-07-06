@@ -13,8 +13,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 const HeaderContent = () => {
   return (
-    <>
-      <div className={styles.title}>
+    <div className={styles.container}>
+      <div className={styles.header}>
         <h1 className={styles.text}>
           Hello there!
           <Image
@@ -23,7 +23,7 @@ const HeaderContent = () => {
             src={waving}
             height={28}
           />{" "}
-          I&apos;m <span className={utils.strong}>Cristian</span>.
+          I&apos;m <span className={utils.stronger}>Cristian</span>.
         </h1>
         <p>Computer science student @ Tec de Monterrey</p>
         <p>Graduating on June 2024</p>
@@ -41,10 +41,10 @@ const HeaderContent = () => {
         </div>
       </div>
       <div className={`${styles.buttons} ${inter.className}`}>
-        <button>Download my resume</button>
+        <button>My resume</button>
         <button>Contact me </button>
       </div>
-    </>
+    </div>
   );
 };
 

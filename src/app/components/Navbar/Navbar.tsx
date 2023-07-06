@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.scss";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarLeftItems}>
-        <div>Resume</div>
+        <Link href="/">Cristian Cázares</Link>
       </div>
       <div className={styles.navbarRightItems}>
         <div>Linked In</div>

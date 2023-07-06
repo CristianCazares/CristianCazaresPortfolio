@@ -7,3 +7,8 @@ body {
   background-color: palette.$colorBackground;
   color: palette.$colorText;
 }
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}

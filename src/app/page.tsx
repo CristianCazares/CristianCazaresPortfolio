@@ -11,17 +11,16 @@ const Home = () => {
       <Navbar />
       <main className={styles.main}>
         <div className={styles.container}>
-          <div className={`${styles.cardHeader} ${styles.imageCard}`}>
+          <div className={`${styles.imageCard}`}>
             <Image
               fill
               alt="Cristian's photo"
               src={CristianPhoto}
               className={styles.image}
+              placeholder="blur"
             />
           </div>
-          <div
-            className={`${styles.cardHeader} ${styles.card} ${styles.aboutCard}`}
-          >
+          <div className={`${styles.aboutCard}`}>
             <HeaderContent />
           </div>
 

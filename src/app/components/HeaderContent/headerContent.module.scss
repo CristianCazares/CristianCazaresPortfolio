@@ -1,26 +1,30 @@
 @use "palette";
+@use "dimensions";
 
-.title {
+.container {
+  border-radius: dimensions.$cardBorderRadius;
+  padding: 32px;
+  box-sizing: border-box;
+  background-image: radial-gradient(at 3% 39%, #b06d7e 0px, transparent 50%),
+    radial-gradient(at 90% 76%, #8785ff 0px, transparent 50%);
+  color: #fff;
+}
+
+.header {
   margin-bottom: 24px;
 }
 
-.title h1 {
+.header h1 {
   font-size: 36px;
   font-weight: inherit;
 }
 
-.title p {
+.header p {
   margin: 0px;
-  font-weight: 600;
-}
-
-.imageContainer {
-  display: inline-block;
 }
 
 .text {
   margin: 0px;
-  display: inline-block;
 }
 
 .buttons {
@@ -31,10 +35,17 @@
 
 .buttons button {
   border: none;
-  background-color: palette.$colorButtonPrimary;
-  color: #ffffff;
+  color: #3aacee;
+  background-color: #1945746f;
   font-weight: 600;
   font-family: inherit;
   padding: 16px;
   border-radius: 12px;
+  transition: 0.5s;
+}
+
+.buttons button:hover {
+  cursor: pointer;
+  background-color: #005d92;
+  color: #fff;
 }
