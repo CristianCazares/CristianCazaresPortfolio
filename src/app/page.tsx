@@ -18,6 +18,7 @@ const Home = () => {
               src={CristianPhoto}
               className={styles.image}
               placeholder="blur"
+              sizes="50vw"
             />
           </div>
           <div className={`${styles.aboutCard}`}>

@@ -4,11 +4,13 @@ import styles from "./headerContent.module.scss";
 import utils from "@/../styles/utils.module.scss";
 import Image from "next/image";
 import { waving } from "@/utils/imagesExports";
+import { FaDownload, FaEnvelope } from "react-icons/fa6";
 
 import { Rubik } from "next/font/google";
 const rubik = Rubik({ subsets: ["latin"] });
 
 import { Inter } from "next/font/google";
+import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 const HeaderContent = () => {
@@ -41,8 +43,18 @@ const HeaderContent = () => {
         </div>
       </div>
       <div className={`${styles.buttons} ${inter.className}`}>
-        <button>My resume</button>
-        <button>Contact me </button>
+        <Link href={"/"} className={styles.button}>
+          <FaDownload />
+          <div>My resume</div>
+        </Link>
+        <Link
+          href={"mailto:cristian.cazares@outlook.com"}
+          target="_blank"
+          className={styles.button}
+        >
+          <FaEnvelope />
+          Contact me
+        </Link>
       </div>
     </div>
   );

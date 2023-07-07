@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import styles from "./navbar.module.scss";
+import utils from "@/../styles/utils.module.scss";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -22,7 +23,9 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbarLeftItems}>
-        <Link href="/">Cristian Cázares</Link>
+        <Link href="/" className={utils.stronger}>
+          Cristian Cázares
+        </Link>
       </div>
       <div className={styles.navbarRightItems}>
         <div>Linked In</div>
