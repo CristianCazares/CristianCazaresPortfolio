@@ -20,6 +20,7 @@
   grid-column: span 3;
   overflow: hidden;
   position: relative;
+  min-height: 275px;
   border-radius: dimensions.$cardBorderRadius;
 }
 

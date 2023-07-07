@@ -23,12 +23,21 @@
 }
 
 .navbarLeftItems {
-  margin-left: 16px;
+  margin-left: 42px;
 }
 
 .navbarRightItems {
   display: flex;
   flex-direction: row;
-  gap: 16px;
-  margin-right: 16px;
+  align-items: center;
+  gap: 28px;
+  margin-right: 42px;
+}
+
+.navbarRightItems a {
+  transition: 0.5s;
+}
+
+.navbarRightItems a:hover {
+  color: #0071e3;
 }

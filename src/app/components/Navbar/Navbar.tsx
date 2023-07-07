@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import styles from "./navbar.module.scss";
 import utils from "@/../styles/utils.module.scss";
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa6";
+
+const ICON_SIZE = 24;
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,9 +31,18 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={styles.navbarRightItems}>
-        <div>Linked In</div>
-        <div>Email</div>
-        <div>GitHub</div>
+        <Link href={"mailto:cristian.cazares@outlook.com"} target="_blank">
+          <FaEnvelope size={ICON_SIZE} />
+        </Link>
+        <Link
+          href={"https://www.linkedin.com/in/cristian-javier-cazares-molina/"}
+          target="_blank"
+        >
+          <FaLinkedin size={ICON_SIZE} />
+        </Link>
+        <Link href={"https://github.com/CristianCazares"} target="_blank">
+          <FaGithub size={ICON_SIZE} />
+        </Link>
       </div>
     </nav>
   );
