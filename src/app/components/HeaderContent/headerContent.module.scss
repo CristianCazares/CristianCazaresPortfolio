@@ -34,25 +34,6 @@
   justify-content: flex-end;
 }
 
-.buttons button {
-  border: none;
-  color: #27c9ff;
-  background-color: #00000031;
-  font-weight: 700;
-  font-family: inherit;
-  padding: 16px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  transition: 0.5s;
-}
-.buttons button:hover {
-  cursor: pointer;
-  background-color: #3b92cf;
-  color: #fff;
-}
-
 .button {
   display: flex;
   flex-direction: row;
