@@ -3,19 +3,34 @@
 
 .container {
   height: 100%;
-  background-color: #181818e9;
+  background-color: palette.$projectBackgroundColor;
   border-radius: dimensions.$cardBorderRadius;
-  padding: 32px;
+  padding: dimensions.$cardPadding;
+  padding-bottom: 0px;
   box-sizing: border-box;
   transition: transform 0.25s ease-in-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .container:hover {
   transform: scale(102%);
   cursor: pointer;
+  position: relative;
 }
 
 .link {
   color: inherit;
   text-decoration: inherit;
+}
+
+.imageContainer {
+  position: relative;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.image {
+  object-fit: contain;
 }

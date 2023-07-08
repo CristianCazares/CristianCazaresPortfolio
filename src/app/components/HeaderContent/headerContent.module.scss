@@ -6,8 +6,7 @@
   padding: 32px;
   box-sizing: border-box;
   background-image: radial-gradient(at 3% 39%, #b06d7e 0px, transparent 50%),
-    radial-gradient(at 90% 76%, #8785ff 0px, transparent 50%);
-  color: #fff;
+    radial-gradient(at 90% 76%, #8785ff 0px, transparent 40%);
 }
 
 .header {
@@ -15,7 +14,7 @@
 }
 
 .header h1 {
-  font-size: 36px;
+  font-size: dimensions.$h1Size;
   font-weight: inherit;
 }
 
@@ -31,7 +30,8 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  justify-content: flex-end;
+  justify-content: center;
+  margin-top: 32px;
 }
 
 .button {
@@ -42,16 +42,16 @@
   padding: 16px;
   border: none;
   border-radius: 12px;
-  background-color: #00000031;
-  color: #27c9ff;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: #ffffff;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: 500;
   font-size: small;
-  transition: 0.5s;
+  transition: dimensions.$transitionHoverDuration;
 }
 
 .button:hover {
   cursor: pointer;
-  background-color: #3b92cf;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }

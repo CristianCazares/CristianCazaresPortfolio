@@ -1,6 +1,9 @@
 import Link from "next/link";
 import styles from "./projectCard.module.scss";
 import { ProjectBasicInfo } from "@/utils/types";
+import Image from "next/image";
+
+import MacBookIBM from "@/../public/img/MockUps/IBMStrategicDashboard/MacBook.png";
 
 const ProjectCard = ({ title, subtitle, url, image }: ProjectBasicInfo) => {
   return (
@@ -9,6 +12,18 @@ const ProjectCard = ({ title, subtitle, url, image }: ProjectBasicInfo) => {
         <div className={styles.container}>
           <h2>{title}</h2>
           <p>{subtitle}</p>
+          <div className={styles.imageContainer}>
+            {image && (
+              <Image
+                src={MacBookIBM}
+                fill
+                alt="IBM Strategic Dashboard MacBook"
+                className={styles.image}
+                quality={100}
+                sizes="100vw"
+              />
+            )}
+          </div>
         </div>
       </Link>
     </>

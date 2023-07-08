@@ -11,5 +11,5 @@ export type ProjectBasicInfo = {
   title: string;
   subtitle: string;
   url: string;
-  image: string;
+  image: StaticImageData | "";
 };
