@@ -5,17 +5,26 @@ import Image from "next/image";
 
 import MacBookIBM from "@/../public/img/MockUps/IBMStrategicDashboard/MacBook.png";
 
-const ProjectCard = ({ title, subtitle, url, image }: ProjectBasicInfo) => {
+const ProjectCard = ({
+  title,
+  subtitle,
+  url,
+  image,
+  backColor,
+}: ProjectBasicInfo) => {
   return (
     <>
       <Link href={url} className={styles.link}>
-        <div className={styles.container}>
+        <div
+          className={styles.container}
+          style={{ backgroundColor: backColor }}
+        >
           <h2>{title}</h2>
           <p>{subtitle}</p>
           <div className={styles.imageContainer}>
             {image && (
               <Image
-                src={MacBookIBM}
+                src={image}
                 fill
                 alt="IBM Strategic Dashboard MacBook"
                 className={styles.image}

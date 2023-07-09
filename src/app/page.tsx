@@ -36,6 +36,7 @@ const Home = () => {
                   subtitle={project.subtitle}
                   image={project.image}
                   url={project.url}
+                  backColor={project.backColor}
                 />
               </div>
             );

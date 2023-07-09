@@ -1,6 +1,6 @@
 import { ProjectBasicInfo } from "@/utils/types";
 
-import { IBM } from "./images";
+import { IBM, FoodBank } from "./images";
 
 export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
   {
@@ -9,13 +9,15 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
       "BUILT FOR IBM | Data analytics and visualizations of employees courses, badges and certifications",
     image: IBM,
     url: "/projects/ibm-strategic-dashboard",
+    backColor: "#625A73",
   },
   {
     title: "Food Bank",
     subtitle:
       "Create your own food collection campaigns! In partnership with BAMX: Mexican Food Bank Network.",
-    image: "",
+    image: FoodBank,
     url: "/projects/food-bank",
+    backColor: "#cd8418",
   },
   {
     title: "IJTALTI Peers",

@@ -12,4 +12,5 @@ export type ProjectBasicInfo = {
   subtitle: string;
   url: string;
   image: StaticImageData | "";
+  backColor?: `#${string}`;
 };
