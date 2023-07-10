@@ -1,6 +1,5 @@
 import { ProjectBasicInfo } from "@/utils/types";
-
-import { IBM, FoodBank } from "./images";
+import { IBM, FoodBank, IJALTI } from "./images";
 
 export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
   {
@@ -23,8 +22,9 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     title: "IJTALTI Peers",
     subtitle:
       "Discover your ideal job and perfect employees! Networking app for the Guadalajara metropolitan area.",
-    image: "",
+    image: IJALTI,
     url: "/projects/ijalti-peers",
+    backColor: "#4a6da0"
   },
   {
     title: "Blood Manager",

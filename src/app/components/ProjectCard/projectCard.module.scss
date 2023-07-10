@@ -5,13 +5,22 @@
   height: 100%;
   background-color: palette.$projectBackgroundColor;
   border-radius: dimensions.$cardBorderRadius;
-  padding: dimensions.$cardPadding;
   padding-bottom: 0px;
   box-sizing: border-box;
   transition: transform 0.25s ease-in-out;
   position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0 6px;
+
+  h2 {
+    margin: dimensions.$cardPadding dimensions.$cardPadding 0
+      dimensions.$cardPadding;
+  }
+
+  p {
+    margin: 4px dimensions.$cardPadding 8px dimensions.$cardPadding;
+  }
 }
 
 .container:hover {
@@ -29,6 +38,7 @@
   position: relative;
   flex-grow: 1;
   justify-content: flex-end;
+  margin-top: auto;
 }
 
 .image {

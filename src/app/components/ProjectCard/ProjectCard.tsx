@@ -3,8 +3,6 @@ import styles from "./projectCard.module.scss";
 import { ProjectBasicInfo } from "@/utils/types";
 import Image from "next/image";
 
-import MacBookIBM from "@/../public/img/MockUps/IBMStrategicDashboard/MacBook.png";
-
 const ProjectCard = ({
   title,
   subtitle,
@@ -26,10 +24,10 @@ const ProjectCard = ({
               <Image
                 src={image}
                 fill
+                sizes="100vw"
                 alt="IBM Strategic Dashboard MacBook"
                 className={styles.image}
-                quality={100}
-                sizes="100vw"
+                quality={75}
               />
             )}
           </div>

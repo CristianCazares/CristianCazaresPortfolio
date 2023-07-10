@@ -14,3 +14,5 @@ export type ProjectBasicInfo = {
   image: StaticImageData | "";
   backColor?: `#${string}`;
 };
+
+export type Tag = "AI" | "VR" | "Hackathon" | "ReactJS" | "NextJS" | "Full Stack Contributions"
