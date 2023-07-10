@@ -1,5 +1,5 @@
 import { ProjectBasicInfo } from "@/utils/types";
-import { IBM, FoodBank, IJALTI } from "./images";
+import { IBM, FoodBank, IJALTI, BloodManager, ICOF } from "./images";
 
 export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
   {
@@ -24,14 +24,15 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
       "Discover your ideal job and perfect employees! Networking app for the Guadalajara metropolitan area.",
     image: IJALTI,
     url: "/projects/ijalti-peers",
-    backColor: "#4a6da0"
+    backColor: "#4a6da0",
   },
   {
     title: "Blood Manager",
     subtitle:
       "HackMTY 2022 FINALIST! Find blood donors or sign up to donate and save lives!",
-    image: "",
+    image: BloodManager,
     url: "/projects/blood-manager",
+    backColor: "#7052b2",
   },
   {
     title: "Multiagents",
@@ -43,7 +44,8 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     title: "In Case Of VR",
     subtitle:
       "Virtual reality fire protection training approved by Civil Protection and the Fire Department",
-    image: "",
+    image: ICOF,
     url: "/projects/in-case-of",
+    backColor: "#7a2e2e",
   },
 ];
