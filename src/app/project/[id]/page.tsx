@@ -30,13 +30,12 @@ const Page = ({ params }: PageProps) => {
         <h2>There is also a video available</h2>
         <div className={styles.videoContainer}>
           <iframe
+            style={{ border: "none" }}
             src="https://www.youtube.com/embed/NHos0bgb_L0"
             title="YouTube video player"
-            frameborder="0"
             width="100%"
             height="100%"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
           />
         </div>
       </div>
