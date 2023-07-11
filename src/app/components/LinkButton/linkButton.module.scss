@@ -1,0 +1,39 @@
+@use "dimensions";
+
+.link {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: medium;
+  transition: dimensions.$transitionHoverDuration;
+}
+
+.sm {
+  font-size: small;
+}
+
+.md {
+  font-size: medium;
+}
+
+.lg {
+  font-size: large;
+}
+
+.xl {
+  font-size: larger;
+}
+
+.link:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #000;
+}
