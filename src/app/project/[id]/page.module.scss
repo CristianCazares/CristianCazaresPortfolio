@@ -1,0 +1,51 @@
+@use "palette";
+
+.disclaimerContainer {
+  padding: 32px;
+  border-radius: 16px;
+  background-color: #ffffffc7;
+  color: #000;
+}
+
+.disclaimer {
+  font-size: 36px;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+.repoContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #0071e3;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.repoContainer:hover {
+  color: #6538c4;
+}
+
+.repoLink {
+  font-size: 72px;
+  text-decoration: underline;
+}
+
+.videoContainer{
+  height: 40vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+  .repoLink {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 500px) {
+  .repoLink {
+    font-size: 32px;
+  }
+}
