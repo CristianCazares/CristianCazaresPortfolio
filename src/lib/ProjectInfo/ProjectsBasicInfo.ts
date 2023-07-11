@@ -14,7 +14,7 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
   {
     title: "IBM Strategic Dashboard",
     subtitle:
-      "BUILT FOR IBM | Data analytics and visualizations of employees courses, badges and certifications",
+      "BUILT FOR IBM | Data analytics and visualizations of employees' courses, badges and certifications",
     image: IBM,
     url: `${ROUTE}/ibm-strategic-dashboard`,
     backColor: "#625A73",

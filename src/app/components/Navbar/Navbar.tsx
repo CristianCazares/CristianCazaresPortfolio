@@ -32,16 +32,16 @@ const Navbar = () => {
       </div>
       <div className={styles.navbarRightItems}>
         <Link href={"mailto:cristian.cazares@outlook.com"} target="_blank">
-          <FaEnvelope size={ICON_SIZE} />
+          <FaEnvelope size={ICON_SIZE} className={styles.mail}/>
         </Link>
         <Link
           href={"https://www.linkedin.com/in/cristian-javier-cazares-molina/"}
           target="_blank"
         >
-          <FaLinkedin size={ICON_SIZE} />
+          <FaLinkedin size={ICON_SIZE} className={styles.linkedIn}/>
         </Link>
         <Link href={"https://github.com/CristianCazares"} target="_blank">
-          <FaGithub size={ICON_SIZE} />
+          <FaGithub size={ICON_SIZE} className={styles.gitHub}/>
         </Link>
       </div>
     </nav>

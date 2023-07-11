@@ -11,6 +11,7 @@ const rubik = Rubik({ subsets: ["latin"] });
 
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import LinkButton from "../LinkButton";
 const inter = Inter({ subsets: ["latin"] });
 
 const HeaderContent = () => {
@@ -43,18 +44,16 @@ const HeaderContent = () => {
         </div>
       </div>
       <div className={`${styles.buttons} ${inter.className}`}>
-        <Link href={"/"} className={styles.button}>
-          <FaDownload />
-          <div>My resume</div>
-        </Link>
-        <Link
-          href={"mailto:cristian.cazares@outlook.com"}
-          target="_blank"
-          className={styles.button}
+        <LinkButton url="/resume" icon={<FaDownload />}>
+          My resume
+        </LinkButton>
+        <LinkButton
+          url="mailto:cristian.cazares@outlook.com"
+          icon={<FaEnvelope />}
+          targetBlank={true}
         >
-          <FaEnvelope />
           Contact me
-        </Link>
+        </LinkButton>
       </div>
     </div>
   );

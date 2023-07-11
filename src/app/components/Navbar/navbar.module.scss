@@ -43,3 +43,21 @@ $buttonHover: #0071e3;
     color: $buttonHover;
   }
 }
+
+.gitHub,
+.linkedIn,
+.mail {
+  transition: dimensions.$transitionHoverDuration;
+}
+
+.gitHub:hover {
+  color: #9472c8;
+}
+
+.linkedIn:hover {
+  color: $buttonHover;
+}
+
+.mail:hover {
+  color: #b53737;
+}
