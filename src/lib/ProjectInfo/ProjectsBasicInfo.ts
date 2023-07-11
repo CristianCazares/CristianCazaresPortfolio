@@ -1,5 +1,12 @@
 import { ProjectBasicInfo } from "@/utils/types";
-import { IBM, FoodBank, IJALTI, BloodManager, ICOF } from "./images";
+import {
+  IBM,
+  FoodBank,
+  IJALTI,
+  BloodManager,
+  ICOF,
+  Multiagents,
+} from "./images";
 
 const ROUTE = "/project";
 
@@ -11,6 +18,7 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     image: IBM,
     url: `${ROUTE}/ibm-strategic-dashboard`,
     backColor: "#625A73",
+    tags: ["AI", "Full Stack Contributions", "NextJS", "React"],
   },
   {
     title: "Food Bank",
@@ -19,6 +27,7 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     image: FoodBank,
     url: `${ROUTE}/food-bank`,
     backColor: "#cd8418",
+    tags: ["Mobile", "React", "Full Stack Contributions"],
   },
   {
     title: "IJTALTI Peers",
@@ -27,6 +36,7 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     image: IJALTI,
     url: `${ROUTE}/ijalti-peers`,
     backColor: "#4a6da0",
+    tags: ["Web", "React"],
   },
   {
     title: "Blood Manager",
@@ -35,12 +45,15 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     image: BloodManager,
     url: `${ROUTE}/blood-manager`,
     backColor: "#7052b2",
+    tags: ["Web", "React", "Hackathon", "Full Stack Contributions"],
   },
   {
     title: "Multiagents",
     subtitle: "AI Powered 3D simulation of a real dangerous crossroad",
-    image: "",
+    image: Multiagents,
     url: `${ROUTE}/multiagents`,
+    backColor: "#8b894f",
+    tags: ["3D", "AI", "Full Stack Contributions", "Unity"],
   },
   {
     title: "In Case Of VR",
@@ -49,5 +62,6 @@ export const PROJECT_BASIC_INFO: ProjectBasicInfo[] = [
     image: ICOF,
     url: `${ROUTE}/in-case-of`,
     backColor: "#7a2e2e",
+    tags: ["3D", "Unity", "VR"],
   },
 ];
