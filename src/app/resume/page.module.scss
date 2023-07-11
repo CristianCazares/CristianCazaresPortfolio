@@ -1,0 +1,34 @@
+.title {
+  font-size: 96px;
+  margin: 16px 0;
+}
+
+.resumeContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 129.4117647%; /* 16:9 Aspect Ratio */
+}
+
+.resume {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.buttons {
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+@media (max-width: 1100px) {
+  .title {
+    font-size: 64px;
+  }
+}

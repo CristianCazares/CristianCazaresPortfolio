@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.content {
+  width: 90%;
+  max-width: 1100px;
+  display: grid;
+  margin: 16px;
+  grid-template-columns: 33.3333% auto;
+  gap: 16px;
+  place-items: center;
+}
+
+@media (max-width: 700px) {
+  .content {
+    grid-template-columns: auto;
+  }
+}
