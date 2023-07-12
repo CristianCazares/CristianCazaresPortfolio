@@ -1,0 +1,11 @@
+.carouselContainer {
+  position: relative;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-top: auto;
+  height: 472.5px;
+}
+
+.image {
+  object-fit: contain;
+}
