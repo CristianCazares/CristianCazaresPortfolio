@@ -25,17 +25,20 @@ const Home = () => {
             <HeaderContent />
           </div>
 
-          {PROJECT_BASIC_INFO.map((project, i) => {
+          {Array.from(PROJECT_BASIC_INFO, ([key, value]) => ({
+            key,
+            ...value,
+          })).map((project, i) => {
             return (
               <div
-                key={`Project${i}`}
+                key={project.key}
                 className={`${styles.projectCard} ${styles.card}`}
               >
                 <ProjectCard
                   title={project.title}
                   subtitle={project.subtitle}
                   image={project.image}
-                  url={project.url}
+                  url={`project/${project.key}`}
                   backColor={project.backColor}
                 />
               </div>
