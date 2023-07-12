@@ -32,7 +32,7 @@ const Home = () => {
             return (
               <div
                 key={project.key}
-                className={`${styles.projectCard} ${styles.card}`}
+                className={`${styles.projectCard}`}
               >
                 <ProjectCard
                   title={project.title}

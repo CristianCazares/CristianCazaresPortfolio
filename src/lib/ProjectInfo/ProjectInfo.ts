@@ -13,7 +13,6 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
       "A Web App built for IBM to analize and visualize their employees courses, badges and certifications.",
     githubLink: "https://github.com/Bugs-io/ibm-dashboard-app",
     embedVideoLink: "https://www.youtube.com/embed/5l5CpOcT3Vs",
-    onConstruction: true,
   },
   "food-bank": {
     title: "Food Bank",

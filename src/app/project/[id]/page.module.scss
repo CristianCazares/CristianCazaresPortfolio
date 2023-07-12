@@ -1,51 +1,34 @@
 @use "palette";
 
-.disclaimerContainer {
-  padding: 32px;
-  border-radius: 16px;
-  background-color: #ffffffc7;
-  color: #000;
+.container {
 }
 
-.disclaimer {
-  font-size: 36px;
-  margin: 0px;
-  margin-bottom: 16px;
+.header {
 }
 
-.repoContainer {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  color: #0071e3;
-  cursor: pointer;
-  margin-bottom: 32px;
+.layout {
+  display: grid;
+  grid-template-columns: auto 60%;
 }
 
-.repoContainer:hover {
-  color: #6538c4;
+.carouselContainer {
+  position: relative;
+  flex-grow: 1;
+  justify-content: flex-end;
+  margin-top: auto;
 }
 
-.repoLink {
-  font-size: 72px;
-  text-decoration: underline;
+.image {
+  object-fit: contain;
 }
 
-.videoContainer{
-  height: 40vh;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-
-@media (max-width: 768px) {
-  .repoLink {
-    font-size: 42px;
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 100%;
   }
-}
 
-@media (max-width: 500px) {
-  .repoLink {
-    font-size: 32px;
+  .carouselContainer {
+    height: 100%;
+    min-height: 200px;
   }
 }
