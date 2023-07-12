@@ -21,23 +21,33 @@ const Page = ({ params }: PageProps) => {
       <br />
       <div className={styles.disclaimerContainer}>
         <h2 className={styles.disclaimer}>This page is under construction</h2>
-        <div className={styles.repoContainer}>
-          <FaGithub size={72} />
-          <Link className={styles.repoLink} href={""}>
-            Check the repo!
-          </Link>
-        </div>
-        <h2>There is also a video available</h2>
-        <div className={styles.videoContainer}>
-          <iframe
-            style={{ border: "none" }}
-            src="https://www.youtube.com/embed/NHos0bgb_L0"
-            title="YouTube video player"
-            width="100%"
-            height="100%"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-          />
-        </div>
+        {project.githubLink && (
+          <div className={styles.repoContainer}>
+            <FaGithub size={72} />
+            <Link className={styles.repoLink} href={project.githubLink}>
+              Check the repo!
+            </Link>
+          </div>
+        )}
+        {project.embedVideoLink && (
+          <>
+            <h2>
+              {project.githubLink
+                ? "There is also a video available"
+                : "Check a video in the meantime!"}
+            </h2>
+            <div className={styles.videoContainer}>
+              <iframe
+                style={{ border: "none" }}
+                src={project.embedVideoLink}
+                title="YouTube video player"
+                width="100%"
+                height="100%"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              />
+            </div>
+          </>
+        )}
       </div>
     </>
   );
