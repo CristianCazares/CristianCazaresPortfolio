@@ -1,9 +1,15 @@
 .container {
   display: grid;
   place-content: center;
-  margin: 16px;
+  margin: 16px 64px 32px 64px;
 }
 
 .content {
   max-width: 1400px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    margin: 16px 8px 32px 8px;
+  }
 }
