@@ -1,11 +1,21 @@
+$marginX: 5%;
 .container {
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 16px 64px 32px 64px;
 }
 
 .content {
   max-width: 1400px;
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 16px 16px 32px 16px;
+  }
 }
 
 @media (max-width: 720px) {

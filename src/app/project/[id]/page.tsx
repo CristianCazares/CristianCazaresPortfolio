@@ -1,9 +1,8 @@
 import { OnConstruction } from "../components";
-import { PROJECTS_DATA } from "@/lib/ProjectInfo/ProjectInfo";
-import { ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
-import styles from "./page.module.scss";
-import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
 import ProjectCarousel from "../components/ProjectCarousel";
+
+import { PROJECTS_DATA, ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
+import styles from "./page.module.scss";
 
 interface PageProps {
   params: {
@@ -36,26 +35,22 @@ const Page = ({ params }: PageProps) => {
         </div>
         <div className={styles.layout}>
           <div className={styles.description}>
-            <h2>Description</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Recusandae est saepe, quis hic ipsa officia, voluptatem aspernatur
-              dolorem distinctio mollitia repudiandae reprehenderit tenetur
-              vitae unde magni consequuntur magnam laboriosam consequatur.
+              {project.description}
             </p>
-            <h2>Tech Stack</h2>
-            <p>nice</p>
+            {project.techStack && (
+              <>
+                <h2>Tech Stack</h2>
+                <ul>
+                  {project.techStack.map((item) => (
+                    <li key={`techStack_${item}`}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
           <div className={styles.carouselContainer}>
-            {/*<Image
-              src={ibmCarrousel[0]}
-              alt="test"
-              fill
-              sizes="100vw"
-              quality={100}
-              className={styles.image}
-        />*/}
-            <ProjectCarousel images={ibmCarrousel} />
+            <ProjectCarousel images={project.carousel!} />
           </div>
         </div>
       </div>

@@ -1,9 +1,14 @@
+import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
+import { StaticImageData } from "next/image";
+
 export type ProjectContent = {
   title: string;
   description: string;
   githubLink?: string;
   embedVideoLink?: string;
   onConstruction?: boolean;
+  carousel?: StaticImageData[];
+  techStack?: string[];
 };
 
 export const PROJECTS_DATA: Record<string, ProjectContent> = {
@@ -13,6 +18,17 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
       "A Web App built for IBM to analize and visualize their employees courses, badges and certifications.",
     githubLink: "https://github.com/Bugs-io/ibm-dashboard-app",
     embedVideoLink: "https://www.youtube.com/embed/5l5CpOcT3Vs",
+    carousel: ibmCarrousel,
+    techStack: [
+      "NextJS",
+      "Axios",
+      "Carbon Design",
+      "Sass",
+      "Python",
+      "FastAPI",
+      "Pandas",
+      "Numpy",
+    ],
   },
   "food-bank": {
     title: "Food Bank",
