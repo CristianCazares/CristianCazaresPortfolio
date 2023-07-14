@@ -52,18 +52,25 @@ const Page = ({ params }: PageProps) => {
           </div>
         </div>
         <div className={styles.layout}>
-          <div className={styles.description}>
-            <p>{project.description}</p>
-            {project.techStack && (
-              <>
-                <h2>Tech Stack</h2>
-                <ul>
+          <div className={styles.information}>
+            <div className={styles.description}>
+              {Array.isArray(project.description) ? (
+                project.description.map((item, i) => (
+                  <p key={`description${i}`}>{item}</p>
+                ))
+              ) : (
+                <p>{project.description}</p>
+              )}
+            </div>
+            <div>
+              {project.techStack && (
+                <>
                   {project.techStack.map((item) => (
-                    <li key={`techStack_${item}`}>{item}</li>
+                    <p key={`techStack_${item}`}>{item}</p>
                   ))}
-                </ul>
-              </>
-            )}
+                </>
+              )}
+            </div>
           </div>
           <div className={styles.carouselContainer}>
             <ProjectCarousel images={project.carousel!} />

@@ -30,7 +30,7 @@ const ProjectCarousel = ({ images }: Props) => {
   }, []);
 
   return (
-    <div ref={carouselRef} className={styles.carouselContainer}>
+    <div ref={carouselRef} className={styles.container}>
       <Carousel
         showThumbs={false}
         showStatus={false}

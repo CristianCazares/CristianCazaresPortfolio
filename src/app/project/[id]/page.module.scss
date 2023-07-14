@@ -3,19 +3,44 @@
 .container {
   width: 100%;
   margin-top: 32px;
+  display: grid;
+  place-content: center;
 }
 
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
 
   h1 {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 42px;
     margin: 0px;
-    margin-right: 32px;
+    margin-bottom: 16px;
   }
+}
+
+.information {
+  display: grid;
+  grid-template-columns: 85% auto;
+  border-radius: 16px;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  p,
+  li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.description {
+  border-right: 1px solid #444;
+}
+
+.techStack {
 }
 
 .buttons {
@@ -40,9 +65,15 @@
 }
 
 .layout {
-  display: grid;
-  grid-template-columns: 33.3333% auto;
-  gap: 16px;
+  max-width: 1000px;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-bottom: 42px;
 }
 
 @media (max-width: 780px) {
