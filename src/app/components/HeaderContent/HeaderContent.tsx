@@ -10,7 +10,6 @@ import { Rubik } from "next/font/google";
 const rubik = Rubik({ subsets: ["latin"] });
 
 import { Inter } from "next/font/google";
-import Link from "next/link";
 import LinkButton from "../LinkButton";
 const inter = Inter({ subsets: ["latin"] });
 

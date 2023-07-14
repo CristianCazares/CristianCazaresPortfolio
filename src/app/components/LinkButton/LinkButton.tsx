@@ -3,7 +3,7 @@ import styles from "./linkButton.module.scss";
 
 interface Props {
   url: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   icon?: React.ReactElement<any, any>;
   targetBlank?: boolean;
   size?: "md" | "sm" | "lg" | "xl";

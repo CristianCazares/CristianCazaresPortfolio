@@ -2,9 +2,41 @@
 
 .container {
   width: 100%;
+  margin-top: 32px;
 }
 
 .header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 42px;
+    margin: 0px;
+    margin-right: 32px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(120%);
+}
+
+.link {
+  display: grid;
+  place-content: center;
 }
 
 .layout {
