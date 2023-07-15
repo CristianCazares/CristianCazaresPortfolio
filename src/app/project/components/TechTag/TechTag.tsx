@@ -1,14 +1,10 @@
-import hexToHsl from "@/utils/hexToHsl";
+import { generateTextShade, hexToHsl, parseHSL } from "@/utils/colorTools";
 import styles from "./techTag.module.scss";
 
 interface Props {
   tag: string;
   color: `#${string}`;
 }
-
-const parseHSL = (arrayHSL: [number, number, number]): string => {
-  return `hsl(${arrayHSL[0]},${arrayHSL[1]}%,${arrayHSL[2]}%)`;
-};
 
 const TechTag = ({ tag, color }: Props) => {
   const colorHSL = hexToHsl(color);
@@ -20,6 +16,7 @@ const TechTag = ({ tag, color }: Props) => {
         <span
           style={{
             backgroundColor: colorHSLParsed,
+            color: generateTextShade(color),
           }}
         >
           {tag}

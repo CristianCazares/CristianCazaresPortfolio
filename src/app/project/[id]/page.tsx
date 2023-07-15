@@ -55,16 +55,8 @@ const Page = ({ params }: PageProps) => {
         </div>
         <div className={styles.layout}>
           <div className={styles.information}>
-            <div className={styles.description}>
-              {Array.isArray(project.description) ? (
-                project.description.map((item, i) => (
-                  <p key={`description${i}`}>{item}</p>
-                ))
-              ) : (
-                <p>{project.description}</p>
-              )}
-            </div>
             <div className={styles.techStack}>
+              <h3>Tech Stack</h3>
               {project.techStack && (
                 <>
                   {project.techStack.map((item, i) => {
@@ -74,6 +66,15 @@ const Page = ({ params }: PageProps) => {
                     );
                   })}
                 </>
+              )}
+            </div>
+            <div className={styles.description}>
+              {Array.isArray(project.description) ? (
+                project.description.map((item, i) => (
+                  <p key={`description${i}`}>{item}</p>
+                ))
+              ) : (
+                <p>{project.description}</p>
               )}
             </div>
           </div>

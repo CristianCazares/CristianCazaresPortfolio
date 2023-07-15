@@ -1,4 +1,4 @@
-const hexToHsl = (hex: string): [number, number, number] => {
+export const hexToHsl = (hex: string): [number, number, number] => {
   // Remove the '#' symbol if present
   if (hex.startsWith("#")) {
     hex = hex.slice(1);
@@ -46,4 +46,25 @@ const hexToHsl = (hex: string): [number, number, number] => {
   return [h, s * 100, l * 100];
 };
 
-export default hexToHsl;
+export const generateTextShade = (hexColor: string): string => {
+  const baseColor = hexColor.replace(/^#/, ""); // Remove '#' if present
+  const colorValue = parseInt(baseColor, 16);
+
+  const r = (colorValue >> 16) & 255;
+  const g = (colorValue >> 8) & 255;
+  const b = colorValue & 255;
+
+  const step = Math.floor(255 / 4);
+  const shadeR = Math.max(0, r - 2 * step);
+  const shadeG = Math.max(0, g - 2 * step);
+  const shadeB = Math.max(0, b - 2 * step);
+
+  const shadeHex = `#${((shadeR << 16) | (shadeG << 8) | shadeB)
+    .toString(16)
+    .padStart(6, "0")}`;
+  return shadeHex;
+};
+
+export const parseHSL = (arrayHSL: [number, number, number]): string => {
+  return `hsl(${arrayHSL[0]},${arrayHSL[1]}%,${arrayHSL[2]}%)`;
+};

@@ -19,12 +19,13 @@
     font-size: 42px;
     margin: 0px;
     margin-bottom: 16px;
+    text-align: center;
   }
 }
 
 .information {
   display: grid;
-  grid-template-columns: 85% auto;
+  grid-template-columns: auto 85%;
   border-radius: 16px;
   gap: 16px;
   margin-bottom: 16px;
@@ -43,7 +44,13 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  align-items: end;
+  margin-top: 18px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  h3 {
+    margin: 0px;
+  }
 }
 
 .buttons {
@@ -84,7 +91,19 @@
     grid-template-columns: 100%;
   }
 
-  .carouselContainer {
-    height: 100%;
+  .information {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .techStack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h3 {
+      display: none;
+    }
   }
 }
