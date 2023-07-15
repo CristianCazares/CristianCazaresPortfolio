@@ -37,10 +37,13 @@
 }
 
 .description {
-  border-right: 1px solid #444;
 }
 
 .techStack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: end;
 }
 
 .buttons {

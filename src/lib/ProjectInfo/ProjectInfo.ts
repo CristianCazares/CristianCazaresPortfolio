@@ -1,4 +1,5 @@
 import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
+import { TechKey } from "@/utils/types";
 import { StaticImageData } from "next/image";
 
 export type ProjectContent = {
@@ -8,7 +9,7 @@ export type ProjectContent = {
   embedVideoLink?: string;
   onConstruction?: boolean;
   carousel?: StaticImageData[];
-  techStack?: string[];
+  techStack?: TechKey[];
 };
 
 export const PROJECTS_DATA: Record<string, ProjectContent> = {
@@ -24,14 +25,14 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     embedVideoLink: "https://www.youtube.com/embed/5l5CpOcT3Vs",
     carousel: ibmCarrousel,
     techStack: [
-      "NextJS",
-      "Axios",
-      "Carbon Design",
-      "Sass",
-      "Python",
-      "FastAPI",
-      "Pandas",
-      "Numpy",
+      "nextjs",
+      "axios",
+      "carbonDesign",
+      "sass",
+      "python",
+      "fastAPI",
+      "pandas",
+      "numpy",
     ],
   },
   "food-bank": {

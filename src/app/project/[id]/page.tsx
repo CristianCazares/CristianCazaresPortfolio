@@ -8,6 +8,8 @@ import { FaGithub, FaYoutube } from "react-icons/fa6";
 import { Open_Sans } from "next/font/google";
 import Link from "next/link";
 import Video from "../components/Video";
+import TechTag from "../components/TechTag";
+import { Techs } from "@/lib/Techs";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface PageProps {
@@ -62,12 +64,15 @@ const Page = ({ params }: PageProps) => {
                 <p>{project.description}</p>
               )}
             </div>
-            <div>
+            <div className={styles.techStack}>
               {project.techStack && (
                 <>
-                  {project.techStack.map((item) => (
-                    <p key={`techStack_${item}`}>{item}</p>
-                  ))}
+                  {project.techStack.map((item, i) => {
+                    const tech = Techs.get(item);
+                    return (
+                      tech && <TechTag tag={tech.tag} color={tech.color} />
+                    );
+                  })}
                 </>
               )}
             </div>
