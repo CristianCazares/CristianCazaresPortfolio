@@ -25,6 +25,7 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     embedVideoLink: "https://www.youtube.com/embed/5l5CpOcT3Vs",
     carousel: ibmCarrousel,
     techStack: [
+      "typescript",
       "nextjs",
       "axios",
       "carbonDesign",
