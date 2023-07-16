@@ -16,10 +16,10 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
   "ibm-strategic-dashboard": {
     title: "IBM Strategic Dashboard",
     description: [
-      "A Web App built for IBM to analize and visualize their employees courses, badges and certifications.",
-      "It implements AI algorithms and data analysis tools to extract insights from both internal of IBM and external information from mainstream online courses plattforms.",
-      "The design is focused to be organic to IBM's product by implmenting their design system and clear charts.",
-      "During the development I was the leader of the frontend team, while also making contributions to the API and data analysis service.",
+      "A Web App built for **IBM** to **analize** and **visualize** their employees courses, badges and certifications.",
+      "It implements **AI algorithms** and **data analysis tools** to extract insights from both **internal** data of IBM and **external** information from **mainstream online courses plattforms**.",
+      "The design is focused to be **organic** to IBM's product by implmenting their design system and clear charts.",
+      "During the development I was the **leader of the frontend team**, while also making **contributions to the API and data analysis service**.",
     ],
     githubLink: "https://github.com/Bugs-io/ibm-dashboard-app",
     embedVideoLink: "https://www.youtube.com/embed/5l5CpOcT3Vs",
