@@ -1,0 +1,13 @@
+.container {
+  font-weight: 600;
+  font-size: 14px;
+  color: rgba(1, 1, 1, 0.65);
+
+  span {
+    border-radius: 16px;
+    text-align: center;
+    padding: 2px 4px;
+    width: auto;
+    display: inline-block;
+  }
+}

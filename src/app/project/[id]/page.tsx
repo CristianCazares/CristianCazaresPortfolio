@@ -1,8 +1,16 @@
-import Link from "next/link";
-import { PROJECTS_DATA } from "@/lib/ProjectInfo/ProjectInfo";
-import { ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
+import { OnConstruction } from "../components";
+import ProjectCarousel from "../components/ProjectCarousel";
+import { PROJECTS_DATA, ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
 import styles from "./page.module.scss";
-import { FaGithub } from "react-icons/fa6";
+import LinkButton from "@/app/components/LinkButton";
+import { FaGithub, FaYoutube } from "react-icons/fa6";
+
+import { Open_Sans } from "next/font/google";
+import Link from "next/link";
+import Video from "../components/Video";
+import TechTag from "../components/TechTag";
+import { Techs } from "@/lib/Techs";
+const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface PageProps {
   params: {
@@ -10,43 +18,77 @@ interface PageProps {
   };
 }
 
-const Page = ({ params }: PageProps) => {
-  const { id } = params;
+const onConstruction = (id: string) => {
   const project: ProjectContent = PROJECTS_DATA[id];
 
   return (
     <>
       <h1>{project.title}</h1>
       <h4>{project.description}</h4>
-      <br />
-      <div className={styles.disclaimerContainer}>
-        <h2 className={styles.disclaimer}>This page is under construction</h2>
-        {project.githubLink && (
-          <div className={styles.repoContainer}>
-            <FaGithub size={72} />
-            <Link className={styles.repoLink} href={project.githubLink}>
-              Check the repo!
-            </Link>
-          </div>
-        )}
-        {project.embedVideoLink && (
-          <>
-            <h2>
-              {project.githubLink
-                ? "There is also a video available"
-                : "Check a video in the meantime!"}
-            </h2>
-            <div className={styles.videoContainer}>
-              <iframe
-                style={{ border: "none" }}
-                src={project.embedVideoLink}
-                title="YouTube video player"
-                width="100%"
-                height="100%"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-              />
+      <OnConstruction project={project} />
+    </>
+  );
+};
+
+const Page = ({ params }: PageProps) => {
+  const { id } = params;
+  const project: ProjectContent = PROJECTS_DATA[id];
+
+  if (project.onConstruction) return onConstruction(id);
+  return (
+    <>
+      <div className={`${styles.container} ${openSans.className}`}>
+        <div className={styles.header}>
+          <h1>{project.title}</h1>
+          <div className={styles.buttons}>
+            <div className={styles.button}>
+              <Link href={project.githubLink!} className={styles.link}>
+                <FaGithub size={36} />
+              </Link>
             </div>
-          </>
+            <div className={styles.button}>
+              <Link href={"#video"} className={styles.link}>
+                <FaYoutube size={36} />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className={styles.layout}>
+          <div className={styles.information}>
+            <div className={styles.techStackContainer}>
+              <h3>Tech Stack</h3>
+              <div className={styles.techStack}>
+                {project.techStack && (
+                  <>
+                    {project.techStack.map((item, i) => {
+                      const tech = Techs.get(item);
+                      return (
+                        tech && <TechTag tag={tech.tag} color={tech.color} />
+                      );
+                    })}
+                  </>
+                )}
+              </div>
+            </div>
+            <div className={styles.description}>
+              {Array.isArray(project.description) ? (
+                project.description.map((item, i) => (
+                  <p key={`description${i}`}>{item}</p>
+                ))
+              ) : (
+                <p>{project.description}</p>
+              )}
+            </div>
+          </div>
+          <div className={styles.carouselContainer}>
+            <ProjectCarousel images={project.carousel!} />
+          </div>
+        </div>
+        {project.embedVideoLink && (
+          <section id="video">
+            <h2>Video demo</h2>
+            <Video embedVideoLink={project.embedVideoLink} />
+          </section>
         )}
       </div>
     </>

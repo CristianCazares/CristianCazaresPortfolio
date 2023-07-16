@@ -1,0 +1,17 @@
+.carousel {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+.imageContainer {
+  position: relative;
+  transform: scale(102%);
+}
+
+.image {
+  object-fit: contain;
+}

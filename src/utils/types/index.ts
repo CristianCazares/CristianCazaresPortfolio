@@ -27,3 +27,22 @@ export type ProjectBasicInfo = {
   backColor?: `#${string}`;
   tags?: Tag[];
 };
+
+export type Tech = {
+  tag: string;
+  color: `#${string}`;
+};
+
+export type TechKey =
+  | "nextjs"
+  | "axios"
+  | "carbonDesign"
+  | "sass"
+  | "fastAPI"
+  | "python"
+  | "pandas"
+  | "numpy"
+  | "reactjs"
+  | "unity"
+  | "c#"
+  | "agentpy";

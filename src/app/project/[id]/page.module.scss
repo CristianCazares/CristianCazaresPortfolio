@@ -1,51 +1,123 @@
 @use "palette";
 
-.disclaimerContainer {
-  padding: 32px;
-  border-radius: 16px;
-  background-color: #ffffffc7;
-  color: #000;
+.container {
+  width: 100%;
+  margin-top: 32px;
+  display: grid;
+  place-content: center;
 }
 
-.disclaimer {
-  font-size: 36px;
-  margin: 0px;
-  margin-bottom: 16px;
-}
-
-.repoContainer {
+.header {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
   align-items: center;
-  color: #0071e3;
-  cursor: pointer;
-  margin-bottom: 32px;
-}
+  justify-content: center;
+  margin-bottom: 16px;
 
-.repoContainer:hover {
-  color: #6538c4;
-}
-
-.repoLink {
-  font-size: 72px;
-  text-decoration: underline;
-}
-
-.videoContainer{
-  height: 40vh;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-
-@media (max-width: 768px) {
-  .repoLink {
+  h1 {
+    font-weight: 600;
     font-size: 42px;
+    margin: 0px;
+    margin-bottom: 16px;
+    text-align: center;
   }
 }
 
-@media (max-width: 500px) {
-  .repoLink {
-    font-size: 32px;
+.information {
+  display: grid;
+  grid-template-columns: auto 80%;
+  border-radius: 16px;
+  gap: 16px;
+  margin-bottom: 16px;
+
+  p,
+  li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.description {
+}
+
+.techStackContainer {
+  h3 {
+    margin: 0;
+    margin-top: 18px;
+  }
+}
+
+.techStack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  h3 {
+    margin: 0px;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transform: scale(120%);
+}
+
+.link {
+  display: grid;
+  place-content: center;
+}
+
+.layout {
+  max-width: 1000px;
+}
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 100%;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .techStackContainer {
+    width: 100%;
+    h3 {
+      display: none;
+    }
+  }
+
+  .techStack {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h3 {
+      display: none;
+    }
   }
 }
