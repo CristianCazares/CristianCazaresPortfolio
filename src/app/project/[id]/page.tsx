@@ -55,18 +55,20 @@ const Page = ({ params }: PageProps) => {
         </div>
         <div className={styles.layout}>
           <div className={styles.information}>
-            <div className={styles.techStack}>
+            <div className={styles.techStackContainer}>
               <h3>Tech Stack</h3>
-              {project.techStack && (
-                <>
-                  {project.techStack.map((item, i) => {
-                    const tech = Techs.get(item);
-                    return (
-                      tech && <TechTag tag={tech.tag} color={tech.color} />
-                    );
-                  })}
-                </>
-              )}
+              <div className={styles.techStack}>
+                {project.techStack && (
+                  <>
+                    {project.techStack.map((item, i) => {
+                      const tech = Techs.get(item);
+                      return (
+                        tech && <TechTag tag={tech.tag} color={tech.color} />
+                      );
+                    })}
+                  </>
+                )}
+              </div>
             </div>
             <div className={styles.description}>
               {Array.isArray(project.description) ? (
