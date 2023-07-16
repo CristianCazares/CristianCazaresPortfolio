@@ -15,3 +15,53 @@
 .image {
   object-fit: contain;
 }
+
+.legendContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 66px;
+  margin-left: 4px;
+  margin-bottom: 8px;
+}
+
+.legend {
+  font-size: 24px;
+  margin: 0px;
+  text-align: start;
+  font-weight: 400;
+}
+
+.slideIn {
+  animation: slide-in 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.slideOut {
+  animation: slide-out 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+}

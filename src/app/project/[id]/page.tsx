@@ -90,7 +90,7 @@ const Page = ({ params }: PageProps) => {
             </div>
           </div>
           <div className={styles.carouselContainer}>
-            <ProjectCarousel images={project.carousel!} />
+            <ProjectCarousel carouselItems={project.carousel!}/>
           </div>
         </div>
         {project.embedVideoLink && (
