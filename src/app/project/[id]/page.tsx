@@ -2,7 +2,6 @@ import { OnConstruction } from "../components";
 import ProjectCarousel from "../components/ProjectCarousel";
 import { PROJECTS_DATA, ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
 import styles from "./page.module.scss";
-import LinkButton from "@/app/components/LinkButton";
 import { FaGithub, FaYoutube } from "react-icons/fa6";
 
 import { Open_Sans } from "next/font/google";
@@ -10,6 +9,7 @@ import Link from "next/link";
 import Video from "../components/Video";
 import TechTag from "../components/TechTag";
 import { Techs } from "@/lib/Techs";
+import ProcessedBoldText from "@/utils/ProcessedBoldText";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface PageProps {
@@ -35,6 +35,7 @@ const Page = ({ params }: PageProps) => {
   const project: ProjectContent = PROJECTS_DATA[id];
 
   if (project.onConstruction) return onConstruction(id);
+
   return (
     <>
       <div className={`${styles.container} ${openSans.className}`}>
@@ -73,15 +74,23 @@ const Page = ({ params }: PageProps) => {
             <div className={styles.description}>
               {Array.isArray(project.description) ? (
                 project.description.map((item, i) => (
-                  <p key={`description${i}`}>{item}</p>
+                  <p key={`description${i}`}>
+                    <ProcessedBoldText boldClass="stronger">
+                      {item}
+                    </ProcessedBoldText>
+                  </p>
                 ))
               ) : (
-                <p>{project.description}</p>
+                <p>
+                  <ProcessedBoldText boldClass="stronger">
+                    {project.description}
+                  </ProcessedBoldText>
+                </p>
               )}
             </div>
           </div>
           <div className={styles.carouselContainer}>
-            <ProjectCarousel images={project.carousel!} />
+            <ProjectCarousel carouselItems={project.carousel!}/>
           </div>
         </div>
         {project.embedVideoLink && (

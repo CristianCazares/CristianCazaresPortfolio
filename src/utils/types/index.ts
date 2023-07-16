@@ -34,6 +34,7 @@ export type Tech = {
 };
 
 export type TechKey =
+  | "typescript"
   | "nextjs"
   | "axios"
   | "carbonDesign"
