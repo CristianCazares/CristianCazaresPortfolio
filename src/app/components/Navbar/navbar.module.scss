@@ -61,3 +61,14 @@ $buttonHover: #0071e3;
 .mail:hover {
   color: #b53737;
 }
+
+@media (max-width: 480px) {
+  .navbarLeftItems {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .navbarRightItems {
+    margin-right: 8px;
+  }
+}
