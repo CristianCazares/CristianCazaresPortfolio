@@ -54,7 +54,7 @@ const ProjectCarousel = ({ carouselItems }: Props) => {
       <Carousel
         showThumbs={false}
         showStatus={false}
-        autoPlay={false}
+        autoPlay
         infiniteLoop
         className={styles.carousel}
         onChange={(index) => handleCarouselLegendChange(index)}

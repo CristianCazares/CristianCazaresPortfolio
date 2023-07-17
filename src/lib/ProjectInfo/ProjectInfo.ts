@@ -1,6 +1,5 @@
 import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
 import { TechKey } from "@/utils/types";
-import { StaticImageData } from "next/image";
 import CarouselItem from "../CarouselItem";
 
 export type ProjectContent = {
