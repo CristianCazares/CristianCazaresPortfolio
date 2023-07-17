@@ -64,7 +64,13 @@ const Page = ({ params }: PageProps) => {
                     {project.techStack.map((item, i) => {
                       const tech = Techs.get(item);
                       return (
-                        tech && <TechTag tag={tech.tag} color={tech.color} />
+                        tech && (
+                          <TechTag
+                            key={`tech${i}`}
+                            tag={tech.tag}
+                            color={tech.color}
+                          />
+                        )
                       );
                     })}
                   </>
@@ -90,7 +96,7 @@ const Page = ({ params }: PageProps) => {
             </div>
           </div>
           <div className={styles.carouselContainer}>
-            <ProjectCarousel carouselItems={project.carousel!}/>
+            <ProjectCarousel carouselItems={project.carousel!} />
           </div>
         </div>
         {project.embedVideoLink && (
