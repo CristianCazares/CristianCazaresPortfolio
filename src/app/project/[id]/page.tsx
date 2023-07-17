@@ -10,6 +10,8 @@ import Video from "../components/Video";
 import TechTag from "../components/TechTag";
 import { Techs } from "@/lib/Techs";
 import ProcessedBoldText from "@/utils/ProcessedBoldText";
+import Head from "next/head";
+import { Metadata } from "next";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface PageProps {
@@ -17,6 +19,16 @@ interface PageProps {
     id: string;
   };
 }
+
+export const generateMetadata = ({ params }: PageProps): Metadata => {
+  const { id } = params;
+  const projectName = PROJECTS_DATA[id].title;
+  return {
+    title: `Cristian | ${projectName}`,
+    description:
+      "Project made by Cristian Cazares and other software engineers",
+  };
+};
 
 const onConstruction = (id: string) => {
   const project: ProjectContent = PROJECTS_DATA[id];
@@ -38,6 +50,9 @@ const Page = ({ params }: PageProps) => {
 
   return (
     <>
+      <Head>
+        <title>Cristian | {project.title}</title>
+      </Head>
       <div className={`${styles.container} ${openSans.className}`}>
         <div className={styles.header}>
           <h1>{project.title}</h1>
