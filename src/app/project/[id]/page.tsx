@@ -115,7 +115,7 @@ const Page = ({ params }: PageProps) => {
           </div>
         </div>
         {project.embedVideoLink && (
-          <section id="video">
+          <section id="video" className={styles.videoContainer}>
             <h2>Video demo</h2>
             <Video embedVideoLink={project.embedVideoLink} />
           </section>

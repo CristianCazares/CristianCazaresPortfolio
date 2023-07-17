@@ -37,9 +37,6 @@
   }
 }
 
-.description {
-}
-
 .techStackContainer {
   h3 {
     margin: 0;
@@ -119,5 +116,22 @@
     h3 {
       display: none;
     }
+  }
+}
+
+@media (max-width: 720px) {
+  .information {
+    margin: 0px 16px;
+  }
+
+  .carouselContainer {
+    h3 {
+      margin: 0px 8px;
+    }
+  }
+
+  .videoContainer {
+    margin-left: 16px;
+    margin-right: 16px;
   }
 }
