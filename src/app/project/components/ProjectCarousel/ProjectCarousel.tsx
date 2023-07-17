@@ -17,6 +17,7 @@ const ProjectCarousel = ({ carouselItems }: Props) => {
   );
   const [carouselLegendAnimation, setCarouselLegendAnimation] =
     useState<string>("");
+  const [carouselAutoPlay, setCarouselAutoPlay] = useState<boolean>(true);
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -54,10 +55,11 @@ const ProjectCarousel = ({ carouselItems }: Props) => {
       <Carousel
         showThumbs={false}
         showStatus={false}
-        autoPlay
+        autoPlay={carouselAutoPlay}
         infiniteLoop
         className={styles.carousel}
         onChange={(index) => handleCarouselLegendChange(index)}
+        onSwipeStart={(e) => setCarouselAutoPlay(false)}
       >
         {carouselItems.map((item, i) => {
           return (
