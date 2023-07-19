@@ -110,9 +110,11 @@ const Page = ({ params }: PageProps) => {
               )}
             </div>
           </div>
-          <div className={styles.carouselContainer}>
-            <ProjectCarousel carouselItems={project.carousel!} />
-          </div>
+          {project.carousel && (
+            <div className={styles.carouselContainer}>
+              <ProjectCarousel carouselItems={project.carousel!} />
+            </div>
+          )}
         </div>
         {project.embedVideoLink && (
           <section id="video" className={styles.videoContainer}>

@@ -38,9 +38,13 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
   },
   "food-bank": {
     title: "Food Bank",
-    description: "Make donations",
+    description: [
+      "**Create** and **manage** food collection campaigns.",
+      "Find the **nearest** campaign and donate a viarety of products.",
+      "Connect with Mexico's Food Bank to deliver the goods **to the people that need it the most**.",
+    ],
     githubLink: "https://github.com/FoodBank-GDL/FoodBank-ReactNative",
-    onConstruction: true,
+    techStack: ["reactNative", "nodejs", "firebase", "expressjs"],
   },
   "ijalti-peers": {
     title: "IJALTI Peers",

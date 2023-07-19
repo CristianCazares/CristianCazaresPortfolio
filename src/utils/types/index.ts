@@ -46,4 +46,8 @@ export type TechKey =
   | "reactjs"
   | "unity"
   | "c#"
-  | "agentpy";
+  | "agentpy"
+  | "nodejs"
+  | "reactNative"
+  | "firebase"
+  | "expressjs";
