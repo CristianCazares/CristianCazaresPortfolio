@@ -1,6 +1,7 @@
-import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
 import { TechKey } from "@/utils/types";
 import CarouselItem from "../CarouselItem";
+import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
+import foodBankCarousel from "@/../public/img/carousels/ibm-strategic-dashboard/food-bank";
 
 export type ProjectContent = {
   title: string;
@@ -39,12 +40,15 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
   "food-bank": {
     title: "Food Bank",
     description: [
-      "**Create** and **manage** food collection campaigns.",
-      "Find the **nearest** campaign and donate a viarety of products.",
-      "Connect with Mexico's Food Bank to deliver the goods **to the people that need it the most**.",
+      "**Mexico's Food Bank Network (BAMX)**, wanted to innovate by having their own a mobile app to improve one of their process.",
+      "Our team created a space where external contributors can create their own campaigns without depending on BAMX's infraestructure.",
+      "**Make donations easy** by finding the **nearest** collection campaign or your communities with their own campaigns.",
+      "**Improve donations management**! Find in one place everything you need to keep track of donators and merchancy",
+      "Use clear objectives and take advantage on communities to **encourage donations**.",
     ],
     githubLink: "https://github.com/FoodBank-GDL/FoodBank-ReactNative",
     techStack: ["reactNative", "nodejs", "firebase", "expressjs"],
+    carousel: foodBankCarousel,
   },
   "ijalti-peers": {
     title: "IJALTI Peers",

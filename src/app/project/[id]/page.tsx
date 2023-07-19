@@ -62,11 +62,13 @@ const Page = ({ params }: PageProps) => {
                 <FaGithub size={36} />
               </Link>
             </div>
-            <div className={styles.button}>
-              <Link href={"#video"} className={styles.link}>
-                <FaYoutube size={36} />
-              </Link>
-            </div>
+            {project.embedVideoLink && (
+              <div className={styles.button}>
+                <Link href={"#video"} className={styles.link}>
+                  <FaYoutube size={36} />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.layout}>
