@@ -30,16 +30,14 @@ const Home = () => {
             ...value,
           })).map((project, i) => {
             return (
-              <div
-                key={project.key}
-                className={`${styles.projectCard}`}
-              >
+              <div key={project.key} className={`${styles.projectCard}`}>
                 <ProjectCard
                   title={project.title}
                   subtitle={project.subtitle}
                   image={project.image}
                   url={`project/${project.key}`}
                   backColor={project.backColor}
+                  award={project.award}
                 />
               </div>
             );

@@ -26,6 +26,7 @@ export type ProjectBasicInfo = {
   image: StaticImageData | "";
   backColor?: `#${string}`;
   tags?: Tag[];
+  award?: string;
 };
 
 export type Tech = {

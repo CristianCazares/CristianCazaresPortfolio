@@ -13,11 +13,6 @@
   flex-direction: column;
   padding: 0 6px;
 
-  h2 {
-    margin: dimensions.$cardPadding dimensions.$cardPadding 0
-      dimensions.$cardPadding;
-  }
-
   p {
     margin: 4px dimensions.$cardPadding 8px dimensions.$cardPadding;
   }
@@ -27,6 +22,24 @@
   transform: scale(102%);
   cursor: pointer;
   position: relative;
+}
+
+.header {
+  margin: dimensions.$cardPadding dimensions.$cardPadding 0
+    dimensions.$cardPadding;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 16;
+}
+
+.awardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0px;
+  }
 }
 
 .link {
