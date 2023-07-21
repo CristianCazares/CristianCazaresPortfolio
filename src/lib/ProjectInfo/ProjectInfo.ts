@@ -1,7 +1,7 @@
 import { TechKey } from "@/utils/types";
 import CarouselItem from "../CarouselItem";
 import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
-import foodBankCarousel from "@/../public/img/carousels/ibm-strategic-dashboard/food-bank";
+import foodBankCarousel from "@/../public/img/carousels/food-bank";
 
 export type ProjectContent = {
   title: string;
