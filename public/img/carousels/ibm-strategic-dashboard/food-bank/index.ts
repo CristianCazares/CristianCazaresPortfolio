@@ -8,19 +8,22 @@ import maps from "./maps.png";
 import profile from "./profile.png";
 
 const foodBankCarousel: CarouselItem[] = [
-  { image: auth, legend: "One place. Manage, donate and find" },
+  {
+    image: auth,
+    legend: "Create and find collection centers all in one place",
+  },
   {
     image: feed,
     legend:
-      "Your campaign, your contributions and closest campaings in one feed",
+      "A feed for your campaigns, your active contributions, and other centers in your zone",
   },
   {
     image: manage,
-    legend: "Create a campaign and track the progress of the donations",
+    legend: "Create a campaign and track the progress of each of the donations",
   },
   { image: donate, legend: "Find a campaign and donate to it" },
-  { image: maps, legend: "Find closes campaigns to your locations" },
-  { image: profile, legend: "Just basic information on your profile" },
+  { image: maps, legend: "Use your location to find the closest centers" },
+  { image: profile, legend: "Only share essential information" },
 ];
 
 export default foodBankCarousel;

@@ -37,19 +37,21 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
       "numpy",
     ],
   },
+
   "food-bank": {
     title: "Food Bank",
     description: [
-      "**Mexico's Food Bank Network (BAMX)**, wanted to innovate by having their own a mobile app to improve one of their process.",
-      "Our team created a space where external contributors can create their own campaigns without depending on BAMX's infraestructure.",
-      "**Make donations easy** by finding the **nearest** collection campaign or your communities with their own campaigns.",
-      "**Improve donations management**! Find in one place everything you need to keep track of donators and merchancy",
-      "Use clear objectives and take advantage on communities to **encourage donations**.",
+      "**Mexico's Food Bank Network (BAMX)**, wanted to innovate by having a mobile app to improve one of their processes.",
+      "Our team created a space where external contributors can create their own campaigns without depending on BAMX's infrastructure.",
+      "**Find the collection centers** closest to you, or look for the ones that the communities you belong to are doing.",
+      "**Improve donations management**! Everything you need in one place to keep track of donors and received merchandise.",
+      "Set clear objectives and take advantage of communities to **encourage donations.**",
     ],
     githubLink: "https://github.com/FoodBank-GDL/FoodBank-ReactNative",
     techStack: ["reactNative", "nodejs", "firebase", "expressjs"],
     carousel: foodBankCarousel,
   },
+
   "ijalti-peers": {
     title: "IJALTI Peers",
     description: "Look for job and hire people",
@@ -57,12 +59,14 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     embedVideoLink: "https://www.youtube.com/embed/v1yR7HWqCqQ",
     onConstruction: true,
   },
+
   "blood-manager": {
     title: "Blood Manager",
     description: "Donate Blood, ask for Blood Donations",
     githubLink: "https://github.com/HackMTY-Team-6/HackMTY-Team6",
     onConstruction: true,
   },
+
   multiagents: {
     title: "Multiagents",
     description: "Self driving cars on real life crossroad",
@@ -70,6 +74,7 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     embedVideoLink: "https://www.youtube.com/embed/tju9cw_chtc",
     onConstruction: true,
   },
+
   "in-case-of": {
     title: "In Case Of",
     description: "Virtual Reality Fire Drill",
