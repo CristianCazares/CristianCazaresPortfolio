@@ -51,12 +51,12 @@ export const PROJECT_BASIC_INFO: Map<string, ProjectBasicInfo> = new Map([
     "blood-manager",
     {
       title: "Blood Manager",
-      subtitle:
-        "HackMTY 2022 FINALIST! Find blood donors or sign up to donate and save lives!",
+      subtitle: "Find blood donors or sign up to donate and save lives!",
       image: BloodManager,
       url: `${ROUTE}/blood-manager`,
       backColor: "#7052b2",
       tags: ["Web", "React", "Hackathon", "Full Stack Contributions"],
+      award: "Finalist at HackMTY 2022",
     },
   ],
   [
@@ -80,6 +80,7 @@ export const PROJECT_BASIC_INFO: Map<string, ProjectBasicInfo> = new Map([
       url: `${ROUTE}/in-case-of`,
       backColor: "#7a2e2e",
       tags: ["3D", "Unity", "VR"],
+      award: "Gold Medal at Infomatrix World Finals 2019",
     },
   ],
 ]);

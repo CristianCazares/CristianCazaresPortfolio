@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./projectCard.module.scss";
 import { ProjectBasicInfo } from "@/utils/types";
 import Image from "next/image";
+import { FaTrophy } from "react-icons/fa6";
 
 const ProjectCard = ({
   title,
@@ -9,6 +10,7 @@ const ProjectCard = ({
   url,
   image,
   backColor,
+  award,
 }: ProjectBasicInfo) => {
   return (
     <>
@@ -17,8 +19,16 @@ const ProjectCard = ({
           className={styles.container}
           style={{ backgroundColor: backColor }}
         >
-          <h2>{title}</h2>
-          <p>{subtitle}</p>
+          <div className={`${styles.header} ${award && styles.withAward}`}>
+            {award && (
+              <div className={styles.awardContainer}>
+                <FaTrophy className={styles.awardIcon} />
+                <p className={styles.awardText}>{award}</p>
+              </div>
+            )}
+            <h2 className={`${styles.title} ${award && styles.withAward}`}>{title}</h2>
+          </div>
+          <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.imageContainer}>
             {image && (
               <Image

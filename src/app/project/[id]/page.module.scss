@@ -90,6 +90,10 @@
 }
 
 @media (max-width: 780px) {
+  .container {
+    margin-top: 0px;
+  }
+
   .layout {
     grid-template-columns: 100%;
   }
@@ -133,5 +137,15 @@
   .videoContainer {
     margin-left: 16px;
     margin-right: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .carouselContainer {
+    margin-bottom: 16px;
   }
 }

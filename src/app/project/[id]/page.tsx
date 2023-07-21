@@ -62,11 +62,13 @@ const Page = ({ params }: PageProps) => {
                 <FaGithub size={36} />
               </Link>
             </div>
-            <div className={styles.button}>
-              <Link href={"#video"} className={styles.link}>
-                <FaYoutube size={36} />
-              </Link>
-            </div>
+            {project.embedVideoLink && (
+              <div className={styles.button}>
+                <Link href={"#video"} className={styles.link}>
+                  <FaYoutube size={36} />
+                </Link>
+              </div>
+            )}
           </div>
         </div>
         <div className={styles.layout}>
@@ -110,9 +112,11 @@ const Page = ({ params }: PageProps) => {
               )}
             </div>
           </div>
-          <div className={styles.carouselContainer}>
-            <ProjectCarousel carouselItems={project.carousel!} />
-          </div>
+          {project.carousel && (
+            <div className={styles.carouselContainer}>
+              <ProjectCarousel carouselItems={project.carousel!} />
+            </div>
+          )}
         </div>
         {project.embedVideoLink && (
           <section id="video" className={styles.videoContainer}>
