@@ -12,39 +12,64 @@
   display: flex;
   flex-direction: column;
   padding: 0 6px;
-
-  p {
-    margin: 4px dimensions.$cardPadding 8px dimensions.$cardPadding;
-  }
 }
 
 .container:hover {
   transform: scale(102%);
   cursor: pointer;
   position: relative;
-}
 
-.header {
-  margin: dimensions.$cardPadding dimensions.$cardPadding 0
-    dimensions.$cardPadding;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  gap: 16;
-}
+  .awardIcon {
+    width: 40px;
+    height: 40px;
+  }
 
-.awardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  p {
-    margin: 0px;
+  .awardText {
+    margin-left: 44px;
+  }
+
+  .title.withAward {
+    margin-left: 44px;
   }
 }
 
 .link {
   color: inherit;
   text-decoration: inherit;
+}
+
+.header {
+  margin-top: dimensions.$cardPadding;
+  margin-right: dimensions.$cardPadding;
+  margin-bottom: 0px;
+  margin-left: dimensions.$cardPadding;
+  position: relative;
+}
+
+.header.withAward {
+  margin-top: calc(dimensions.$cardPadding - 10px);
+}
+
+.awardIcon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition: all 500ms;
+}
+
+.awardText {
+  margin: 0;
+  margin-left: 24px;
+  transition: all 500ms;
+}
+
+.title {
+  margin: 0px;
+  transition: all 500ms;
+}
+
+.subtitle {
+  margin: 4px dimensions.$cardPadding 8px dimensions.$cardPadding;
 }
 
 .imageContainer {

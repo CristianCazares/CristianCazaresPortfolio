@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./projectCard.module.scss";
 import { ProjectBasicInfo } from "@/utils/types";
 import Image from "next/image";
-import { FaAward } from "react-icons/fa6";
+import { FaTrophy } from "react-icons/fa6";
 
 const ProjectCard = ({
   title,
@@ -19,21 +19,16 @@ const ProjectCard = ({
           className={styles.container}
           style={{ backgroundColor: backColor }}
         >
-          <div className={styles.header}>
-            <h2>{title}</h2>
+          <div className={`${styles.header} ${award && styles.withAward}`}>
             {award && (
               <div className={styles.awardContainer}>
-                <FaAward
-                  style={{
-                    color: "linear-gradient(to right, #fdc830, #f37335);",
-                  }}
-                  size={30}
-                />
-                <p>{award}</p>
+                <FaTrophy className={styles.awardIcon} />
+                <p className={styles.awardText}>{award}</p>
               </div>
             )}
+            <h2 className={`${styles.title} ${award && styles.withAward}`}>{title}</h2>
           </div>
-          <p>{subtitle}</p>
+          <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.imageContainer}>
             {image && (
               <Image
