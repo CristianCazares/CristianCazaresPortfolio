@@ -66,9 +66,14 @@
   }
 }
 
-
 @media (max-width: 720px) {
   .carousel {
     border-radius: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legend {
+    font-size: calc((60px / 3) - 3px);
   }
 }
