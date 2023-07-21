@@ -72,46 +72,45 @@ const Page = ({ params }: PageProps) => {
           </div>
         </div>
         <div className={styles.layout}>
-          <div className={styles.information}>
-            <div className={styles.techStackContainer}>
-              <h3>Tech Stack</h3>
-              <div className={styles.techStack}>
-                {project.techStack && (
-                  <>
-                    {project.techStack.map((item, i) => {
-                      const tech = Techs.get(item);
-                      return (
-                        tech && (
-                          <TechTag
-                            key={`tech${i}`}
-                            tag={tech.tag}
-                            color={tech.color}
-                          />
-                        )
-                      );
-                    })}
-                  </>
-                )}
-              </div>
-            </div>
-            <div className={styles.description}>
-              {Array.isArray(project.description) ? (
-                project.description.map((item, i) => (
-                  <p key={`description${i}`}>
-                    <ProcessedBoldText boldClass="stronger">
-                      {item}
-                    </ProcessedBoldText>
-                  </p>
-                ))
-              ) : (
-                <p>
-                  <ProcessedBoldText boldClass="stronger">
-                    {project.description}
-                  </ProcessedBoldText>
-                </p>
+          <div className={styles.techStackContainer}>
+            <h3>Tech Stack</h3>
+            <div className={styles.techStack}>
+              {project.techStack && (
+                <>
+                  {project.techStack.map((item, i) => {
+                    const tech = Techs.get(item);
+                    return (
+                      tech && (
+                        <TechTag
+                          key={`tech${i}`}
+                          tag={tech.tag}
+                          color={tech.color}
+                        />
+                      )
+                    );
+                  })}
+                </>
               )}
             </div>
           </div>
+          <div className={styles.description}>
+            {Array.isArray(project.description) ? (
+              project.description.map((item, i) => (
+                <p key={`description${i}`}>
+                  <ProcessedBoldText boldClass="stronger">
+                    {item}
+                  </ProcessedBoldText>
+                </p>
+              ))
+            ) : (
+              <p>
+                <ProcessedBoldText boldClass="stronger">
+                  {project.description}
+                </ProcessedBoldText>
+              </p>
+            )}
+          </div>
+
           {project.carousel && (
             <div className={styles.carouselContainer}>
               <ProjectCarousel carouselItems={project.carousel!} />
