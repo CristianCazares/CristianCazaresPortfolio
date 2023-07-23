@@ -2,6 +2,7 @@ import { TechKey } from "@/utils/types";
 import CarouselItem from "../CarouselItem";
 import ibmCarrousel from "@/../public/img/carousels/ibm-strategic-dashboard";
 import foodBankCarousel from "@/../public/img/carousels/food-bank";
+import bloodManagerCarousel from "@/../public/img/carousels/blood-manager";
 
 export type ProjectContent = {
   title: string;
@@ -64,7 +65,7 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     title: "Blood Manager",
     description: "Donate Blood, ask for Blood Donations",
     githubLink: "https://github.com/HackMTY-Team-6/HackMTY-Team6",
-    onConstruction: true,
+    carousel: bloodManagerCarousel,
   },
 
   multiagents: {
