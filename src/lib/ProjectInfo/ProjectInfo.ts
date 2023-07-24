@@ -66,6 +66,7 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     description: "Donate Blood, ask for Blood Donations",
     githubLink: "https://github.com/HackMTY-Team-6/HackMTY-Team6",
     carousel: bloodManagerCarousel,
+    onConstruction: true
   },
 
   multiagents: {
