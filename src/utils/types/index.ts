@@ -51,4 +51,7 @@ export type TechKey =
   | "nodejs"
   | "reactNative"
   | "firebase"
-  | "expressjs";
+  | "expressjs"
+  | "documentDB"
+  | "back4App"
+  | "tailwind";

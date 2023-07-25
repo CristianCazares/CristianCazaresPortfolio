@@ -18,4 +18,7 @@ export const Techs: Map<TechKey, Tech> = new Map([
   ["nodejs", { tag: "NodeJS", color: "#68a063" }],
   ["reactNative", { tag: "React Native", color: "#61DBFB" }],
   ["expressjs", { tag: "ExpressJS", color: "#FFFFFFF" }],
+  ["tailwind", { tag: "Tailwind", color: "#a5f3fc" }],
+  ["back4App", { tag: "Back4App", color: "#c5ff9c" }],
+  ["documentDB", { tag: "Document DB", color: "#ad4c98" }],
 ]);
