@@ -35,8 +35,6 @@ const onConstruction = (id: string) => {
 
   return (
     <>
-      <h1>{project.title}</h1>
-      <h4>{project.description}</h4>
       <OnConstruction project={project} />
     </>
   );
