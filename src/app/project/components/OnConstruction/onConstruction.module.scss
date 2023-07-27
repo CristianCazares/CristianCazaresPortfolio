@@ -1,3 +1,13 @@
+.container {
+  h1 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+  }
+}
+
 .disclaimerContainer {
   padding: 32px;
   border-radius: 16px;
@@ -35,6 +45,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 720px) {
+  .container {
+    margin: 16px;
+  }
+}
+
 @media (max-width: 768px) {
   .repoLink {
     font-size: 42px;
@@ -44,5 +60,22 @@
 @media (max-width: 500px) {
   .repoLink {
     font-size: 32px;
+  }
+  .disclaimerContainer {
+    padding: 16px;
+  }
+  .videoHeader {
+    font-size: 22px;
+  }
+  .disclaimer {
+    font-size: 28px;
+  }
+
+  .repoContainer {
+    gap: 8px;
+  }
+  .ghIcon {
+    height: 32px;
+    width: 32px;
   }
 }
