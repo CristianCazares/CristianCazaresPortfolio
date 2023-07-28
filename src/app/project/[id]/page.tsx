@@ -97,7 +97,7 @@ const Page = ({ params }: PageProps) => {
             {Array.isArray(project.description) ? (
               project.description.map((item, i) => (
                 <p key={`description${i}`}>
-                  <ProcessedBoldText boldClass="stronger">
+                  <ProcessedBoldText boldClass="midStrong">
                     {item}
                   </ProcessedBoldText>
                 </p>
