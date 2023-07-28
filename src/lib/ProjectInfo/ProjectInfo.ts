@@ -91,9 +91,14 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
   },
 
   "in-case-of": {
-    title: "In Case Of",
-    description: "Virtual Reality Fire Drill",
+    title: "🔥 In Case Of",
+    description: [
+      "Conventional fire drills are often criticized for their **lack of realism**, **interactivity**, and **effectiveness in knowledge retention**.",
+      "**🔥In Case Of** is **virtual reality** fire safety training software that centers around the proper use of **fire extinguishers**, and the awareness spread of how **dangerous and common** fires really are.",
+      "Unlike traditional fire drills, '🔥In Case Of' offers a **sensorial** and **immersive** experience that plunges users into the **adrenaline-pumping** danger of a real fire emergency while ensuring **safety** for the user and being **environmentally firendly**.",
+      "The final product was **approved** by **local firefighter departments** and **civil protection authorities**, receiving **GOLD MEDAL🥇** at **Infomatrix World Finals** in Bucharest, Romania, 2019.",
+    ],
     embedVideoLink: "https://www.youtube.com/embed/NHos0bgb_L0",
-    onConstruction: true,
+    techStack: ["unity", "c#", "oculusSDK", "blender"],
   },
 };
