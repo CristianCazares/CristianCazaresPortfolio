@@ -12,7 +12,7 @@ export const Techs: Map<TechKey, Tech> = new Map([
   ["numpy", { tag: "Numpy", color: "#67ef7d" }],
   ["reactjs", { tag: "ReactJS", color: "#61DBFB" }],
   ["unity", { tag: "Unity", color: "#9297a5" }],
-  ["c#", { tag: "C#", color: "#9297a5" }],
+  ["c#", { tag: "C#", color: "#9b4993" }],
   ["agentpy", { tag: "Agent.py", color: "#9e8476" }],
   ["firebase", { tag: "Firebase", color: "#F5820D" }],
   ["nodejs", { tag: "NodeJS", color: "#68a063" }],
@@ -21,4 +21,6 @@ export const Techs: Map<TechKey, Tech> = new Map([
   ["tailwind", { tag: "Tailwind", color: "#a5f3fc" }],
   ["back4App", { tag: "Back4App", color: "#c5ff9c" }],
   ["documentDB", { tag: "Document DB", color: "#ad4c98" }],
+  ["oculusSDK", { tag: "Oculus SDK", color: "#0073D0" }],
+  ["blender", { tag: "Blender", color: "#EA7600" }],
 ]);

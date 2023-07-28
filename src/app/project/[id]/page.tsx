@@ -56,9 +56,11 @@ const Page = ({ params }: PageProps) => {
           <h1>{project.title}</h1>
           <div className={styles.buttons}>
             <div className={styles.button}>
-              <Link href={project.githubLink!} className={styles.link}>
-                <FaGithub size={36} />
-              </Link>
+              {project.githubLink && (
+                <Link href={project.githubLink!} className={styles.link}>
+                  <FaGithub size={36} />
+                </Link>
+              )}
             </div>
             {project.embedVideoLink && (
               <div className={styles.button}>

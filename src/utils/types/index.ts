@@ -54,4 +54,6 @@ export type TechKey =
   | "expressjs"
   | "documentDB"
   | "back4App"
-  | "tailwind";
+  | "tailwind"
+  | "oculusSDK"
+  | "blender";
