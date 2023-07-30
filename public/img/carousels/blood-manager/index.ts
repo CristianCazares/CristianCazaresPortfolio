@@ -1,4 +1,5 @@
 import CarouselItem from "@/lib/CarouselItem";
+import auth from "./auth.png";
 import askForm from "./askForm.png";
 import feedDonator from "./feedDonator.png";
 import feedReceiver from "./feedReceiver.png";
@@ -9,7 +10,7 @@ import signup from "./signup.png";
 
 const bloodManagerCarousel: CarouselItem[] = [
   { image: main, legend: "A proposal to securely manage blood donations" },
-  { image: login, legend: "Strong authentication" },
+  { image: auth, legend: "Strong authentication" },
   { image: form, legend: "Based on real life medical standards" },
   { image: askForm, legend: "Ask for donations" },
   { image: feedDonator, legend: "Look at people asking for donations" },
