@@ -72,6 +72,7 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     ],
     githubLink: "https://github.com/HackMTY-Team-6/HackMTY-Team6",
     carousel: bloodManagerCarousel,
+    onConstruction: true,
     techStack: [
       "reactjs",
       "nodejs",
