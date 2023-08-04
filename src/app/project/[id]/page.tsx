@@ -1,17 +1,20 @@
+import { Metadata } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import { FaGithub, FaYoutube } from "react-icons/fa6";
+
 import { OnConstruction } from "../components";
 import ProjectCarousel from "../components/ProjectCarousel";
 import { PROJECTS_DATA, ProjectContent } from "@/lib/ProjectInfo/ProjectInfo";
 import styles from "./page.module.scss";
-import { FaGithub, FaYoutube } from "react-icons/fa6";
-
-import { Open_Sans } from "next/font/google";
-import Link from "next/link";
 import Video from "../components/Video";
 import TechTag from "../components/TechTag";
 import { Techs } from "@/lib/Techs";
 import ProcessedBoldText from "@/utils/ProcessedBoldText";
-import Head from "next/head";
-import { Metadata } from "next";
+import getMarkdownFileContent from "@/utils/getMarkdownFileContent";
+import processMarkdown from "@/utils/processMarkdown";
+
+import { Open_Sans } from "next/font/google";
 const openSans = Open_Sans({ subsets: ["latin"] });
 
 interface PageProps {
@@ -40,17 +43,43 @@ const onConstruction = (id: string) => {
   );
 };
 
-const Page = ({ params }: PageProps) => {
+const getProjectDescription = async (id: string, project: ProjectContent) => {
+  try {
+    const content = (await processMarkdown(getMarkdownFileContent(id))).value;
+    return <div dangerouslySetInnerHTML={{ __html: content }} />;
+  } catch (e) {
+    console.log(`${id}: Migrate this description to markdown!`);
+
+    return Array.isArray(project.description) ? (
+      project.description.map((item, i) => (
+        <p key={`description${i}`}>
+          <ProcessedBoldText boldClass="midStrong">{item}</ProcessedBoldText>
+        </p>
+      ))
+    ) : (
+      <p>
+        <ProcessedBoldText boldClass="stronger">
+          {project.description!}
+        </ProcessedBoldText>
+      </p>
+    );
+  }
+};
+
+const Page = async ({ params }: PageProps) => {
   const { id } = params;
   const project: ProjectContent = PROJECTS_DATA[id];
 
   if (project.onConstruction) return onConstruction(id);
+
+  const projectDescription = getProjectDescription(id, project);
 
   return (
     <>
       <Head>
         <title>Cristian | {project.title}</title>
       </Head>
+
       <div className={`${styles.container} ${openSans.className}`}>
         <div className={styles.header}>
           <h1>{project.title}</h1>
@@ -93,23 +122,7 @@ const Page = ({ params }: PageProps) => {
               )}
             </div>
           </div>
-          <div className={styles.description}>
-            {Array.isArray(project.description) ? (
-              project.description.map((item, i) => (
-                <p key={`description${i}`}>
-                  <ProcessedBoldText boldClass="midStrong">
-                    {item}
-                  </ProcessedBoldText>
-                </p>
-              ))
-            ) : (
-              <p>
-                <ProcessedBoldText boldClass="stronger">
-                  {project.description}
-                </ProcessedBoldText>
-              </p>
-            )}
-          </div>
+          <div className={styles.description}>{projectDescription}</div>
 
           {project.carousel && (
             <div className={styles.carouselContainer}>

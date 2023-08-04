@@ -40,6 +40,15 @@
     font-size: 18px;
     line-height: 28px;
   }
+
+  a {
+    color: #f595ab;
+    text-decoration: underline;
+    transition: ease-in-out 0.1s;
+  }
+  a:hover {
+    color: #fa597f;
+  }
 }
 
 .techStackContainer {
