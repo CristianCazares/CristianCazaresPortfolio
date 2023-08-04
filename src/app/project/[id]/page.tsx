@@ -72,7 +72,7 @@ const Page = async ({ params }: PageProps) => {
 
   if (project.onConstruction) return onConstruction(id);
 
-  const projectDescription = getProjectDescription(id, project);
+  const projectDescription = await getProjectDescription(id, project);
 
   return (
     <>
