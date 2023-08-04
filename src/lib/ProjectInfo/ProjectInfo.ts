@@ -65,10 +65,10 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
     title: "Blood Manager",
     description: [
       "Built within **24 hours** during **HackMTY 2022**, Mexico's largest student hackathon.",
-      "The challenge was to **manage any kind of resource;**, we decided to go with **blood donations**.",
-      "Solicitants sign up with **vital information**, and potential donors undergo **real-life medical assessments** to determine eligibility.",
+      "The challenge was to **manage any kind of resource**; we decided to focus on **blood donations**.",
+      "Requestors sign up with **vital information**, and potential donors undergo **real-life medical assessments** to determine eligibility.",
       "The platform enables **anonymous connections** between donors and recipients by sharing minimal information, ensuring a **streamlined and secure** process.",
-      "The final product was part of a **full concept** that involved setting up a **network of hospitals and blood banks** to make the process **safer** and **regulated**.",
+      "The final product was part of a **comprehensive concept** that involved setting up a network of hospitals and blood banks, making the entire process **safer and regulated.**",
     ],
     githubLink: "https://github.com/HackMTY-Team-6/HackMTY-Team6",
     carousel: bloodManagerCarousel,
