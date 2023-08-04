@@ -6,7 +6,7 @@ import bloodManagerCarousel from "@/../public/img/carousels/blood-manager";
 
 export type ProjectContent = {
   title: string;
-  description: string | string[];
+  description?: string | string[];
   githubLink?: string;
   embedVideoLink?: string;
   onConstruction?: boolean;
