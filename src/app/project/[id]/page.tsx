@@ -50,6 +50,7 @@ const getProjectDescription = async (id: string, project: ProjectContent) => {
   } catch (e) {
     console.log(`${id}: Migrate this description to markdown!`);
 
+    if (!project.description) return;
     return Array.isArray(project.description) ? (
       project.description.map((item, i) => (
         <p key={`description${i}`}>
