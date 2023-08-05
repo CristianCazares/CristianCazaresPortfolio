@@ -84,10 +84,9 @@ export const PROJECTS_DATA: Record<string, ProjectContent> = {
 
   multiagents: {
     title: "Multiagents",
-    description: "Self driving cars on real life crossroad",
     githubLink: "https://github.com/ITESMECHO/MultiagentsGraphics",
     embedVideoLink: "https://www.youtube.com/embed/tju9cw_chtc",
-    onConstruction: true,
+    techStack: ["python", "c#", "unity", "agentpy"],
   },
 
   "in-case-of": {
