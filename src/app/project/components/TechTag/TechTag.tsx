@@ -1,4 +1,9 @@
-import { generateTextShade, hexToHsl, parseHSL } from "@/utils/colorTools";
+import {
+  generatedBackColor,
+  generateTextShade,
+  hexToHsl,
+  parseHSL,
+} from "@/utils/colorTools";
 import styles from "./techTag.module.scss";
 
 interface Props {
@@ -15,8 +20,8 @@ const TechTag = ({ tag, color }: Props) => {
       <div className={styles.container}>
         <span
           style={{
-            backgroundColor: colorHSLParsed,
-            color: generateTextShade(color),
+            backgroundColor: generatedBackColor(color),
+            color: colorHSLParsed,
           }}
         >
           {tag}
