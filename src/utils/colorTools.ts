@@ -68,3 +68,10 @@ export const generateTextShade = (hexColor: string): string => {
 export const parseHSL = (arrayHSL: [number, number, number]): string => {
   return `hsl(${arrayHSL[0]},${arrayHSL[1]}%,${arrayHSL[2]}%)`;
 };
+
+export const generatedBackColor = (hexColor: string): string => {
+  const lightnessFactor = 0.2;
+  let [h, s, l] = hexToHsl(hexColor);
+  l = Math.min(100, l * lightnessFactor); // Increase lightness
+  return `hsl(${h}, ${s}%, ${l}%)`;
+};

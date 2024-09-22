@@ -2,8 +2,7 @@ import Image from "next/image";
 import { HeaderContent, Navbar, ProjectCard } from "./components";
 import styles from "./page.module.scss";
 import { PROJECT_BASIC_INFO } from "@/lib/ProjectInfo/ProjectsBasicInfo";
-
-import CristianPhoto from "@/../public/img/CristianCazares.jpg";
+import CristianPhoto from "@/../public/img/profile/CristianCazares.jpg";
 
 const Home = () => {
   return (
@@ -14,6 +13,7 @@ const Home = () => {
           <div className={`${styles.imageCard}`}>
             <Image
               fill
+              priority
               alt="Cristian's photo"
               src={CristianPhoto}
               className={styles.image}
