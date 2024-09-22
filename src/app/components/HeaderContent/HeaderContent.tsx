@@ -27,8 +27,8 @@ const HeaderContent = () => {
           />{" "}
           I&apos;m <span className={utils.stronger}>Cristian</span>.
         </h1>
-        <p>Computer science student @ Tec de Monterrey</p>
-        <p>Graduating on June 2024</p>
+        <h4>Computer Science Engineer</h4>
+        <small>Tec de Monterrey (2024)</small>
       </div>
       <div className={`${styles.subtitle} ${rubik.className}`}>
         <div className={styles.bulletPoints}>
