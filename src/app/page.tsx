@@ -13,6 +13,7 @@ const Home = () => {
           <div className={`${styles.imageCard}`}>
             <Image
               fill
+              priority
               alt="Cristian's photo"
               src={CristianPhoto}
               className={styles.image}
