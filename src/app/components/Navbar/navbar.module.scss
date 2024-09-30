@@ -14,7 +14,7 @@ $buttonHover: #0071e3;
   width: 100%;
   background: palette.$colorBackground;
   align-items: center;
-  z-index: 1;
+  z-index: 100;
   transition: 1s;
   border-bottom: rgba(64, 64, 67, 100) solid 1px;
 }
