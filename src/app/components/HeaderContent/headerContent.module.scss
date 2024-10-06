@@ -12,12 +12,14 @@ $blobBlur: 100px;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  height: 100%;
 }
 
 .containerMask {
   padding: 32px;
   backdrop-filter: blur($blobBlur);
   box-sizing: border-box;
+  height: 100%;
 }
 
 .blobA,

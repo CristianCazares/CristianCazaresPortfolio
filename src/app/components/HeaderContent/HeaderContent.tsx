@@ -13,25 +13,30 @@ import { Inter } from "next/font/google";
 import LinkButton from "../LinkButton";
 const inter = Inter({ subsets: ["latin"] });
 
-const HeaderContent = () => {
+interface Props {
+  isHomePage?: boolean;
+}
+
+const HeaderContent = ({ isHomePage = false }: Props) => {
   return (
     <div className={styles.container}>
       <div className={styles.containerMask}>
-        <div className={styles.header}>
-          <h1 className={styles.text}>
-            Hello there!
-            <Image
-              alt="waving icon"
-              className={styles.image}
-              src={waving}
-              height={28}
-            />{" "}
-            I&apos;m <span className={utils.stronger}>Cristian</span>.
-          </h1>
-          <h4>Computer Science Engineer</h4>
-          <small>Tec de Monterrey (2024)</small>
-        </div>
-        <div className={`${styles.subtitle} ${rubik.className}`}>
+        <div>
+          <div className={styles.header}>
+            <h1 className={styles.text}>
+              Hello there!
+              <Image
+                alt="waving icon"
+                className={styles.image}
+                src={waving}
+                height={28}
+              />{" "}
+              I&apos;m <span className={utils.stronger}>Cristian</span>.
+            </h1>
+            <h4>Computer Science Engineer</h4>
+            <small>Tec de Monterrey (2024)</small>
+          </div>
+
           <div className={styles.bulletPoints}>
             {BULLET_POINTS.map((item, i) => (
               <AboutMeBulletPoint
@@ -42,18 +47,21 @@ const HeaderContent = () => {
               />
             ))}
           </div>
-        </div>
-        <div className={`${styles.buttons} ${inter.className}`}>
-          <LinkButton url="/resume" icon={<FaDownload />}>
-            My resume
-          </LinkButton>
-          <LinkButton
-            url="mailto:cristian.cazares@outlook.com"
-            icon={<FaEnvelope />}
-            targetBlank={true}
-          >
-            Contact me
-          </LinkButton>
+
+          {!isHomePage && (
+            <div className={`${styles.buttons} ${inter.className}`}>
+              <LinkButton url="/resume" icon={<FaDownload />}>
+                My resume
+              </LinkButton>
+              <LinkButton
+                url="mailto:cristian.cazares@outlook.com"
+                icon={<FaEnvelope />}
+                targetBlank={true}
+              >
+                Contact me
+              </LinkButton>
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.blobsContainer}>
