@@ -1,0 +1,38 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  background: rgb(44, 162, 88);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(44, 162, 88, 1) 0%,
+    rgba(18, 60, 19, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(44, 162, 88, 1) 0%,
+    rgba(18, 60, 19, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(44, 162, 88, 1) 0%,
+    rgba(18, 60, 19, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2ca258",endColorstr="#123c13",GradientType=1);
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.fade.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
