@@ -1,0 +1,56 @@
+.cardImage {
+  /* background-image: url("/afterdark/img/riotrp.webp"); */
+  background-color: tomato;
+  background-size: cover;
+  background-position: center;
+  width: 384px;
+  height: 480px;
+  margin-top: 200vh;
+  transition: margin 1s ease;
+  cursor: pointer;
+}
+
+.perspective {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+
+  transform: perspective(5000px) rotateY((var(--rotateY)))
+    rotateX(var(--rotateX));
+}
+
+.dynamicShadow::before {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  border-radius: inherit;
+  background: black;
+  z-index: -1;
+  transform: translateZ(-100px);
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.fixedShadow::before {
+  content: "";
+  position: absolute;
+  inset: -1rem;
+  border-radius: inherit;
+  background: black;
+  z-index: -1;
+  transform: translateZ(100px);
+  filter: blur(30px);
+  opacity: 0.5;
+}
+
+.cardShow {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 0;
+}
+
+.cardRotated {
+  transform: rotateY(180deg);
+  background-color: blue;
+  cursor: default;
+}

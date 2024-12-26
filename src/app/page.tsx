@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import { HeaderContent, Navbar, ProjectCard } from "./components";
 import styles from "./page.module.scss";
