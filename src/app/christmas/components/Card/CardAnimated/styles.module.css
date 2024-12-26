@@ -52,4 +52,5 @@
 .cardRotated {
   transform: rotateY(180deg);
   background-color: blue;
+  cursor: default;
 }

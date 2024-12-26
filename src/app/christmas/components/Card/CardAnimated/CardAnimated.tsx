@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./styles.module.css";
+import CardContent from "./CardContent";
 
 interface Props {
   className?: string;
@@ -44,13 +45,13 @@ const CardAnimated = ({ className }: Props) => {
       document.removeEventListener("mousemove", handleMouseMove);
       if (cardRef.current) {
         cardRef.current.style.transform = ``;
-        cardRef.current.style.transition = `transform 0.5s ease`;
+        cardRef.current.style.transition = `transform 1s ease`;
       }
     };
   }, [isRotating]);
 
   const handleClick = () => {
-    setIsRotating((prev) => !prev);
+    setIsRotating(false);
   };
   return (
     <div
@@ -63,7 +64,9 @@ const CardAnimated = ({ className }: Props) => {
           : `${styles.cardRotated} ${styles.fixedShadow}`
       }`}
       onClick={handleClick}
-    />
+    >
+      {!isRotating && <CardContent />}
+    </div>
   );
 };
 
