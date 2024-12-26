@@ -56,6 +56,7 @@ const PasswordInput = ({ setIsAccessed }: Props) => {
     if (password.length >= 6) {
       submitPassword();
     }
+    console.log(process.env.NEXT_PUBLIC_CHRISTMAS_PASSWORD_HASHED);
   }, [password, setIsAccessed]);
 
   return (
