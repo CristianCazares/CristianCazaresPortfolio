@@ -1,10 +1,9 @@
 .cardImage {
-  /* background-image: url("/afterdark/img/riotrp.webp"); */
-  background-color: tomato;
+  background-image: url("/afterdark/img/RPFront.png");
   background-size: cover;
   background-position: center;
-  width: 384px;
-  height: 480px;
+  width: 400px;
+  height: 581px;
   margin-top: 200vh;
   transition: margin 1s ease;
   cursor: pointer;
@@ -51,6 +50,9 @@
 
 .cardRotated {
   transform: rotateY(180deg);
-  background-color: blue;
   cursor: default;
+}
+
+.cardImageBack {
+  background-image: url("/afterdark/img/RPBack.png");
 }

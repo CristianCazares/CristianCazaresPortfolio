@@ -6,8 +6,14 @@ import { fetchVariable } from "@/app/db";
 const CardContent = () => {
   const [code, setCode] = useState<string | undefined>("");
   const [isCopied, setIsCopied] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const delayVisibility = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 250));
+      setIsVisible(true);
+    };
+
     const fetchCode = async () => {
       const codeResponse = await fetchVariable(
         "variables",
@@ -16,6 +22,8 @@ const CardContent = () => {
       );
       setCode(codeResponse || "Not ready yet!");
     };
+
+    delayVisibility();
     fetchCode();
   }, []);
 
@@ -28,12 +36,16 @@ const CardContent = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <CodeContainer code={code} handleCopy={handleCopy} />
-      </div>
-      <p className={styles.copiedContainer}>
-        {!isCopied ? "Click on it" : "Copied ✅"}
-      </p>
+      {isVisible && (
+        <>
+          <div>
+            <CodeContainer code={code} handleCopy={handleCopy} />
+          </div>
+          <p className={styles.copiedContainer}>
+            {!isCopied ? "Click on it" : "Copied ✅"}
+          </p>
+        </>
+      )}
     </div>
   );
 };

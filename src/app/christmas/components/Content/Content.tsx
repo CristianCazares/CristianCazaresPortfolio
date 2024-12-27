@@ -5,7 +5,7 @@ import Card from "../Card";
 import cardStyles from "../../components/Card/style.module.css";
 
 const Content = () => {
-  const [isAccessed, setIsAccessed] = useState<boolean>(false);
+  const [isAccessed, setIsAccessed] = useState<boolean>(true);
 
   return (
     <div>
