@@ -8,7 +8,8 @@ const Card = () => {
     <div
       className={`${styles.container} ${styles.background} animate__animated animate__fadeInUpBig`}
     >
-      <CardAnimated />
+      <CardAnimated codeVariant="A" />
+      <CardAnimated codeVariant="B" />
     </div>
   );
 };

@@ -3,19 +3,32 @@ import CodeContainer from "./CodeContainer";
 import styles from "./styles.module.css";
 import { fetchVariable } from "@/app/db";
 
-const CardContent = () => {
+interface Props {
+  codeVariant: string;
+}
+
+const CardContent = ({ codeVariant }: Props) => {
   const [code, setCode] = useState<string | undefined>("");
   const [isCopied, setIsCopied] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const delayVisibility = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 250));
+      setIsVisible(true);
+    };
+
     const fetchCode = async () => {
-      const codeResponse = await fetchVariable(
+      const codeResponse = (await fetchVariable(
         "variables",
         "christmas",
-        "rp_code"
-      );
+        `rp_code_${codeVariant}`
+      )) as string;
+
       setCode(codeResponse || "Not ready yet!");
     };
+
+    delayVisibility();
     fetchCode();
   }, []);
 
@@ -28,12 +41,16 @@ const CardContent = () => {
 
   return (
     <div className={styles.container}>
-      <div>
-        <CodeContainer code={code} handleCopy={handleCopy} />
-      </div>
-      <p className={styles.copiedContainer}>
-        {!isCopied ? "Click on it" : "Copied ✅"}
-      </p>
+      {isVisible && (
+        <>
+          <div>
+            <CodeContainer code={code} handleCopy={handleCopy} />
+          </div>
+          <p className={styles.copiedContainer}>
+            {!isCopied ? "Click on it" : "Copied ✅"}
+          </p>
+        </>
+      )}
     </div>
   );
 };

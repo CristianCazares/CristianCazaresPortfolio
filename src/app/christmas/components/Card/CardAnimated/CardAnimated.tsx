@@ -4,13 +4,14 @@ import CardContent from "./CardContent";
 
 interface Props {
   className?: string;
+  codeVariant: string;
 }
 
-const CardAnimated = ({ className }: Props) => {
+const CardAnimated = ({ className, codeVariant }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const [isShowRiotCard, setIsShowRiotCard] = useState(false);
-  const [isRotating, setIsRotating] = useState(true);
+  const [isTilting, setisTilting] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -21,7 +22,7 @@ const CardAnimated = ({ className }: Props) => {
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!cardRef.current) return;
-      if (!isRotating) return;
+      if (!isTilting) return;
 
       const x = e.clientX;
       const y = e.clientY;
@@ -40,7 +41,14 @@ const CardAnimated = ({ className }: Props) => {
       cardRef.current.style.transition = ``;
     };
 
+    const rotateDelay = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 250));
+      cardRef.current?.classList.add(`${styles.cardImageBack}`);
+    };
+
     document.addEventListener("mousemove", handleMouseMove);
+    if (!isTilting) rotateDelay();
+
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
       if (cardRef.current) {
@@ -48,24 +56,25 @@ const CardAnimated = ({ className }: Props) => {
         cardRef.current.style.transition = `transform 1s ease`;
       }
     };
-  }, [isRotating]);
+  }, [isTilting]);
 
   const handleClick = () => {
-    setIsRotating(false);
+    setisTilting(false);
   };
+
   return (
     <div
       ref={cardRef}
       className={`${className} ${styles.cardImage} ${styles.perspective} ${
         isShowRiotCard ? `${styles.cardShow}` : ``
       } ${
-        isRotating
+        isTilting
           ? `${styles.dynamicShadow}`
           : `${styles.cardRotated} ${styles.fixedShadow}`
       }`}
       onClick={handleClick}
     >
-      {!isRotating && <CardContent />}
+      {!isTilting && <CardContent codeVariant={codeVariant} />}
     </div>
   );
 };
