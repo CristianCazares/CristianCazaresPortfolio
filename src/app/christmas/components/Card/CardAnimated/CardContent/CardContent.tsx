@@ -3,7 +3,11 @@ import CodeContainer from "./CodeContainer";
 import styles from "./styles.module.css";
 import { fetchVariable } from "@/app/db";
 
-const CardContent = () => {
+interface Props {
+  codeVariant: string;
+}
+
+const CardContent = ({ codeVariant }: Props) => {
   const [code, setCode] = useState<string | undefined>("");
   const [isCopied, setIsCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -15,11 +19,12 @@ const CardContent = () => {
     };
 
     const fetchCode = async () => {
-      const codeResponse = await fetchVariable(
+      const codeResponse = (await fetchVariable(
         "variables",
         "christmas",
-        "rp_code"
-      );
+        `rp_code_${codeVariant}`
+      )) as string;
+
       setCode(codeResponse || "Not ready yet!");
     };
 

@@ -4,9 +4,10 @@ import CardContent from "./CardContent";
 
 interface Props {
   className?: string;
+  codeVariant: string;
 }
 
-const CardAnimated = ({ className }: Props) => {
+const CardAnimated = ({ className, codeVariant }: Props) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const [isShowRiotCard, setIsShowRiotCard] = useState(false);
@@ -60,6 +61,7 @@ const CardAnimated = ({ className }: Props) => {
   const handleClick = () => {
     setisTilting(false);
   };
+
   return (
     <div
       ref={cardRef}
@@ -72,7 +74,7 @@ const CardAnimated = ({ className }: Props) => {
       }`}
       onClick={handleClick}
     >
-      {!isTilting && <CardContent />}
+      {!isTilting && <CardContent codeVariant={codeVariant} />}
     </div>
   );
 };

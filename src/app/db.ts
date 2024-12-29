@@ -5,7 +5,7 @@ export const fetchVariable = async (
   collection: string,
   document: string,
   variable: string
-): Promise<string | null> => {
+): Promise<string | boolean | number | null> => {
   try {
     const docRef = doc(db, collection, document);
 

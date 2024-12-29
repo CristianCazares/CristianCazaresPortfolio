@@ -12,7 +12,6 @@ const PasswordInput = ({ setIsAccessed }: Props) => {
   const [password, setPassword] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [rpCode, setRPCode] = useState<string | null>();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -32,20 +31,22 @@ const PasswordInput = ({ setIsAccessed }: Props) => {
           password === "0"
         ) {
           setIsLoading(true);
-          const codeResponse = await fetchVariable(
+
+          await new Promise((resolve) => setTimeout(resolve, 1000));
+
+          const isContentReadyResponse = await fetchVariable(
             "variables",
             "christmas",
-            "rp_code"
+            "is_content_ready"
           );
-          await new Promise((resolve) => setTimeout(resolve, 1000));
-          // if (!codeResponse || codeResponse === "") {
-          //   setError(
-          //     "Correct password. Content not ready, contact support or try again later!"
-          //   );
-          // } else {
-          //   setIsAccessed(true);
-          // }
-          setIsAccessed(true);
+
+          if (!isContentReadyResponse || isContentReadyResponse !== true) {
+            setError(
+              "Correct password. Content not ready, contact support or try again later!"
+            );
+          } else {
+            setIsAccessed(true);
+          }
         } else {
           setError("Wrong password. Check note.");
         }
@@ -55,7 +56,6 @@ const PasswordInput = ({ setIsAccessed }: Props) => {
       }
     };
 
-    submitPassword();
     if (password.length >= 6) {
       submitPassword();
     }
