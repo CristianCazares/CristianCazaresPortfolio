@@ -8,7 +8,7 @@ const Content = () => {
   const [isScreenValid, setIsScreenValid] = useState<boolean>(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)"); // Adjust the width for your breakpoint
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
     const handleChange = () => setIsScreenValid(mediaQuery.matches);
 
     handleChange();
