@@ -2,12 +2,16 @@ import { useEffect, useState } from "react";
 import CodeContainer from "./CodeContainer";
 import styles from "./styles.module.css";
 import { fetchVariable } from "@/app/db";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["500"] });
 
 interface Props {
   codeVariant: string;
+  text: string;
 }
 
-const CardContent = ({ codeVariant }: Props) => {
+const CardContent = ({ codeVariant, text }: Props) => {
   const [code, setCode] = useState<string | undefined>("");
   const [isCopied, setIsCopied] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -40,15 +44,17 @@ const CardContent = ({ codeVariant }: Props) => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       {isVisible && (
         <>
           <div>
             <CodeContainer code={code} handleCopy={handleCopy} />
           </div>
-          <p className={styles.copiedContainer}>
+          <small className={styles.copiedContainer}>
             {!isCopied ? "Click on it" : "Copied ✅"}
-          </p>
+          </small>
+          <p className={`${poppins.className}`}>{text}</p>
+          <p className={`${poppins.className}`}>-Cristian 💖</p>
         </>
       )}
     </div>

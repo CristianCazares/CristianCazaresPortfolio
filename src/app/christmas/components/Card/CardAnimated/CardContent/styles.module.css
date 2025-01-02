@@ -7,6 +7,7 @@
   align-items: center;
   transform: rotateY(180deg);
   text-align: center;
+  margin-top: 100px;
 }
 
 .code {
@@ -23,7 +24,6 @@
   min-width: 250px;
   max-width: 250px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .code:hover {
@@ -31,8 +31,12 @@
 }
 
 .copiedContainer {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 4px;
+}
+
+.container > p {
+  font-weight: 600;
+  padding: 16px;
+  margin: 8px;
+  color: #ffffff;
 }
